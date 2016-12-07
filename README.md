@@ -2,6 +2,8 @@
 
 Shared metadata for Exercism exercises.
 
+[![Build Status](https://travis-ci.org/petertseng/exercism-problem-specifications.svg?branch=verify)](https://travis-ci.org/petertseng/exercism-problem-specifications)
+
 ## Contributing Guide
 
 Please see the [contributing guide](https://github.com/exercism/problem-specifications/blob/master/CONTRIBUTING.md)
