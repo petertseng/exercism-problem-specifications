@@ -6,6 +6,8 @@ Note that tracks are not _required_ to use these exercises and some may be more 
 
 See the [new track roadmap](https://exercism.org/docs/building/tracks/new) for full details on setting up a new track.
 
+[![CI](https://github.com/petertseng/exercism-problem-specifications/workflows/CI/badge.svg?branch=verify)](https://github.com/petertseng/exercism-problem-specifications/actions/workflows/ci.yml?query=branch%3Averify)
+
 ## Reviewing Guidelines
 
 Pull Requests to this repo require three approving reviews to be merged.
