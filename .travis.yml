@@ -4,8 +4,14 @@ node_js:
 
 cache: yarn
 
+# Not install, since that sets up path and does `yarn install`.
+before_install:
+  - rvm install 2.6.4
+  - rvm use 2.6.4
+
 script:
   - bin/check_required_files_present
   - sh bin/check_versions
   - bin/check_optional
   - yarn test
+  - sh bin/verify-all.sh
