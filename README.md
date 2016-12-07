@@ -2,6 +2,8 @@
 
 Shared metadata for Exercism exercises.
 
+[![CI](https://github.com/petertseng/exercism-problem-specifications/workflows/CI/badge.svg?branch=verify)](https://github.com/petertseng/exercism-problem-specifications/actions/workflows/ci.yml?query=branch%3Averify)
+
 ## Contributing Guide
 
 Please see the [contributing guide](./CONTRIBUTING.md).
