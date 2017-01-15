@@ -14,4 +14,5 @@ script:
   - sh bin/check_versions
   - bin/check_optional
   - yarn test
+  - sh bin/list-unverified.sh
   - sh bin/verify-all.sh
