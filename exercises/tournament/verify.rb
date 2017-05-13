@@ -41,9 +41,8 @@ HEADER = ('%-30s | MP |  W |  D |  L |  P' % 'Team').freeze
 def tally(lines)
   teams = Hash.new { |h, k| h[k] = Team.new(k) }
   lines.each { |line|
-    # TODO: Doesn't make sense that we ignore invalid lines. We should error.
     parts = line.chomp.split(?;)
-    next unless parts.size == 3
+    raise "invalid line #{parts}" unless parts.size == 3
     t1, t2, r = parts
     next unless %w(win loss draw).include?(r)
     t1 = teams[t1]
