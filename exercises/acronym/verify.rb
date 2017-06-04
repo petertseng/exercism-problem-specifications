@@ -1,6 +1,12 @@
 require 'json'
 require_relative '../../verify'
 
+json = JSON.parse(File.read(File.join(__dir__, 'canonical-data.json')))
+
+verify(json['cases'], property: 'abbreviate') { |i, _|
+  i['phrase'].delete(?').split(/[_\W]+/).map(&:chr).join.upcase
+}
+
 module AllCaps refine String do
   def all_caps?
     upcase == self
@@ -14,8 +20,13 @@ end end
 
 using AllCaps
 
-json = JSON.parse(File.read(File.join(__dir__, 'canonical-data.json')))
+removed_cases = [{
+  'description' => 'internal caps removed in 1.1.0',
+  'property' => 'abbreviate',
+  'input' => { 'phrase' => 'HyperText Markup Language' },
+  'expected' => 'HTML',
+}]
 
-verify(json['cases'], property: 'abbreviate') { |i, _|
+verify(json['cases'] + removed_cases, property: 'abbreviate') { |i, _|
   i['phrase'].delete(?').split(/[_\W]+/).map { |word| word[0] + word.internal_caps }.join.upcase
 }
