@@ -52,7 +52,7 @@ module UpToDate
   # block: Each exercise directory will be yielded to the block.
   # The block is expected to produce a String: the version of that exercise.
   def self.report(track_dir, ignore_exercises = {})
-    deprecated = Set.new(JSON.parse(File.read(File.join(track_dir, 'config.json')))['deprecated'])
+    deprecated = Set.new(JSON.parse(File.read(File.join(track_dir, 'config.json')))['exercises'].select { |e| e['deprecated'] }.map { |e| e['slug'] })
 
     Dir.glob(File.join(track_dir, 'exercises', '*/')) { |dir|
       name = File.basename(dir)
