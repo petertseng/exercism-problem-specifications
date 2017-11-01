@@ -1,4 +1,4 @@
-DEBUG = true
+DEBUG = false
 
 rules1 = [
   [[:person, :englishman], :==, [:colour, :red]],
@@ -40,7 +40,9 @@ rules = rules2
 rules = rules1
 
 class Learnings
-  def initialize
+  class ContradictionError < StandardError; end
+
+  def initialize(rules)
     attributes = {
       house: [1, 2, 3, 4, 5],
       person: %i(englishman spaniard ukranian norwegian japanese),
@@ -58,6 +60,10 @@ class Learnings
     attributes.each { |k, v|
       raise "#{k} needs #{@size} values but has #{v}" if v.size != @size
     }
+    @epoch = -1
+    @changed_at = -1
+
+    learn_rules(rules)
   end
 
   def query(k1, v1, k2)
@@ -70,6 +76,30 @@ class Learnings
         [v1, {other_attr => v2s}]
       }.to_h
     }.reduce({}) { |a, h| a.merge(h) { |_, v1, v2| v1.merge(v2) } }
+  end
+
+  private
+
+  def learn_rules(rules)
+    0.step { |n|
+      puts "RUN #{n}" if DEBUG
+      @epoch = n
+      rules.each { |a, op, b|
+        puts "RULE: #{a} #{op} #{b}" if DEBUG
+        case op
+        when :==
+          learn_equal(a, b)
+        when :!=
+          learn_unequal(a, b)
+        when :right_of
+          learn_right_of(a, b)
+        when :next_to
+          learn_adjacent(a, b)
+        else raise "Unknown op #{op}"
+        end
+      }
+      break if @changed_at < n
+    }
   end
 
   def learn_equal(r1, r2)
@@ -104,8 +134,6 @@ class Learnings
     assert_is_symmetric
   end
 
-  private
-
   def assert_is_symmetric
     @attributes.permutation(2) { |k1, k2|
       @learned.fetch([k1, k2]).each { |v1, expected_v2s|
@@ -130,7 +158,7 @@ class Learnings
       learn_unequal_internal(k1, not_v1, k2, v2)
     }
     possibilities = query(k1, v1, k2)
-    raise "Should be only one possibility left after #{k1} #{v1} = #{k2} #{v2}, not #{possibilities}" if possibilities.size != 1
+    raise ContradictionError.new("Should be only one possibility left after #{k1} #{v1} = #{k2} #{v2}, not #{possibilities}") if possibilities.size != 1
 
     (@attributes - [k1, k2]).each { |other_k|
       k1_vals = query(k1, v1, other_k)
@@ -138,6 +166,10 @@ class Learnings
       (k1_vals - k2_vals).each { |other_v|
         puts "-> TRANSFER EQ: #{k1} #{v1} = #{k2} #{v2}, #{k1} #{v1} -> #{other_k} = #{k1_vals}, #{k2} #{v2} -> #{other_k} = #{k2_vals}, so #{k1} #{v1} != #{other_k} #{other_v}" if DEBUG
         learn_unequal_internal(k1, v1, other_k, other_v)
+      }
+      (k2_vals - k1_vals).each { |other_v|
+        puts "-> TRANSFER EQ: #{k1} #{v1} = #{k2} #{v2}, #{k1} #{v1} -> #{other_k} = #{k1_vals}, #{k2} #{v2} -> #{other_k} = #{k2_vals}, so #{k1} #{v1} != #{other_k} #{other_v}" if DEBUG
+        learn_unequal_internal(k2, v2, other_k, other_v)
       }
     }
   end
@@ -151,6 +183,7 @@ class Learnings
     possibilities = @learned.fetch([k1, k2]).fetch(v1)
     return unless possibilities.include?(v2)
     possibilities.delete(v2)
+    @changed_at = @epoch
     learn_equal_internal([k1, v1], [k2, possibilities[0]]) if possibilities.size == 1
 
     (@attributes - [k1, k2]).each { |other_k|
@@ -174,29 +207,25 @@ class Learnings
   end
 end
 
-l = Learnings.new
+def query_or_guess(rules, k1, v1, k2)
+  l = Learnings.new(rules)
+  q = l.query(k1, v1, k2)
+  return q.first if q.size == 1
 
-3.times { |n|
-  puts "RUN #{n}" if DEBUG
-  rules.each { |a, op, b|
-    puts "RULE: #{a} #{op} #{b}" if DEBUG
-    case op
-    when :==
-      l.learn_equal(a, b)
-    when :!=
-      l.learn_unequal(a, b)
-    when :right_of
-      l.learn_right_of(a, b)
-    when :next_to
-      l.learn_adjacent(a, b)
-    else raise "Unknown op #{op}"
+  q.each { |guess|
+    begin
+      ll = Learnings.new([[[k1, v1], :==, [k2, guess]]] + rules)
+      p ll.query(k1, v1, k2)
+    rescue => e
+      puts "It isn't #{guess} because #{e}"
+    else
+      puts "It's #{guess}"
+      ll.by_attr(:house).each { |house, attrs|
+        puts "#{house}: #{attrs}"
+      }
     end
   }
-}
+end
 
-p l
-p l.query(:drink, :water, :person)
-p l.query(:pet, :zebra, :person)
-l.by_attr(:house).each { |house, attrs|
-  puts "#{house}: #{attrs}"
-}
+puts query_or_guess(rules, :drink, :water, :person)
+puts query_or_guess(rules, :pet, :zebra, :person)
