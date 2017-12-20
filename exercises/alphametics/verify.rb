@@ -26,6 +26,14 @@ class Alphametics
     prev_letters = Set.new
 
     cant_be_zero = Set.new(terms.map(&:first) + [sum.first]).freeze
+    if cant_be_zero.size == 9
+      # A rare occurrence, but helps in the biggest tests.
+      zeroes = all_letters - cant_be_zero
+      raise "Impossible number of letters: #{zeroes.to_a}" if zeroes.size != 1
+      zero = zeroes.first
+      sub_solutions = [[{zero => 0}.freeze, 0].freeze]
+      prev_letters << zero
+    end
 
     column_term_letters = (1..sum.size).map { |column|
       terms.map { |term| term[-column] }.compact.tally.freeze
