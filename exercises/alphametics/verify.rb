@@ -26,6 +26,14 @@ class Alphametics
     prev_letters = Set.new
 
     cant_be_zero = Set.new(terms.map(&:first) + [sum.first]).freeze
+    if cant_be_zero.size == 9
+      # A rare occurrence, but helps in the biggest tests.
+      zeroes = all_letters - cant_be_zero
+      raise "Impossible number of letters: #{zeroes.to_a}" if zeroes.size != 1
+      zero = zeroes.first
+      sub_solutions = [[{zero => 0}, 0]]
+      prev_letters << zero
+    end
 
     # Solve ONE column at a time (starting from the leftmost)
     # so that we narrow down the search space earlier.
