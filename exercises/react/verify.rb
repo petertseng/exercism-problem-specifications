@@ -26,6 +26,11 @@ verify_schema(cases.each_with_object(Hash.new { |h, k| h[k] = Hash.new(0) }) { |
   c['input']['operations'].each { |op|
     ks = op.keys
     raise "#{op} has no type" unless ks.delete('type')
+    # Optional keys:
+    if op['type'] == 'set_value'
+      ks.delete('expect_callbacks')
+      ks.delete('expect_callbacks_not_to_be_called')
+    end
     h[op['type']][ks] += 1
   }
 })
@@ -151,17 +156,21 @@ def run_ops(ops, cells)
       raise TestFailure, "cell #{op['cell']} had #{cell.value} instead of #{op['value']}" if cell.value != op['value']
     when 'set_value'
       cells[op['cell']].value = op['value']
+      (op['expect_callbacks'] || {}).each { |cbid, expected|
+        observed = callbacks[cbid].delete(:val)
+        raise TestFailure, "callback #{cbid} had #{observed} instead of #{expected}" if observed != expected
+      }
+      (op['expect_callbacks_not_to_be_called'] || []).each { |cbid|
+        raise TestFailure, "callback #{cbid} had #{callbacks[cbid][:val]} but should not have been called" if callbacks[cbid].has_key?(:val)
+      }
     when 'add_callback'
       name = op.fetch('name')
-      vals = []
-      callbacks[name] = {
-        id: cells[op['cell']].add_callback { |v| vals << v },
-        vals: vals,
+      callbacks[name] = cb = {
+        id: cells[op['cell']].add_callback { |v|
+          raise TestFailure, "#{name} already had #{cb[:val]}, can't add #{v}" if cb.has_key?(:val)
+          cb[:val] = v
+        },
       }
-    when 'expect_callback_values'
-      observed = callbacks[op['callback']][:vals]
-      raise TestFailure, "callback #{op['callback']} had #{observed} instead of #{op['values']}" if observed != op['values']
-      observed.clear
     when 'remove_callback'
       cells[op['cell']].remove_callback(callbacks[op['name']][:id])
     else raise "Unknown op #{op['type']}"
