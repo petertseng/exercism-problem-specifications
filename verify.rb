@@ -78,5 +78,7 @@ def verify(*args, **kwargs, &block)
 
   puts "#{passed} passed, #{failed} failed"
 
-  raise "#{failed} failed" if failed > 0
+  if failed > 0
+    at_exit { raise "#{failed} failed in a test of #{property}" }
+  end
 end
