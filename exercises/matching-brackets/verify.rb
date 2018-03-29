@@ -9,7 +9,7 @@ class BracketMatcher
     ?[ => ?],
     ?( => ?),
   }.each_value(&:freeze).freeze
-  CLOSES = PAIRS.values.to_h { |v| [v, true] }.freeze
+  CLOSES = PAIRS.invert.freeze
 
   def initialize(str)
     @str = str.freeze
@@ -47,10 +47,176 @@ end
 
 json = JSON.parse(File.read(File.join(__dir__, 'canonical-data.json')))
 
-verify(json['cases'], property: 'isPaired') { |i, _|
-  begin
-    BracketMatcher.new(i['value']).many_balanced(0) == i['value'].size
-  rescue BracketMatcher::ParseError
-    false
-  end
-}
+multi_verify(json['cases'], property: 'isPaired', implementations: [
+  {
+    name: 'correct',
+    f: ->(i, _) {
+      begin
+        BracketMatcher.new(i['value']).many_balanced(0) == i['value'].size
+      rescue BracketMatcher::ParseError
+        false
+      end
+    },
+  },
+  {
+    name: 'keep deleting',
+    f: ->(i, _) {
+      brackets = ['{}', '()', '[]']
+      r = brackets.join.each_char.to_h { |c| [c, true] }
+      s = i['value'].each_char.select(&r).join
+      while brackets.map { |b| s.gsub!(b, '') }.any?
+        # do nothing; condition mutates s
+      end
+      s.empty?
+    },
+  },
+  {
+    name: 'stack',
+    f: ->(i, _) {
+      stack = []
+      i['value'].each_char { |c|
+        stack << c if BracketMatcher::PAIRS.has_key?(c)
+        if (o = BracketMatcher::CLOSES[c])
+          return false unless stack.pop == o
+        end
+      }
+      stack.empty?
+    },
+  },
+  {
+    name: 'stack, but returns too early',
+    should_fail: true,
+    f: ->(i, _) {
+      stack = []
+      i['value'].each_char { |c|
+        stack << c if BracketMatcher::PAIRS.has_key?(c)
+        if (o = BracketMatcher::CLOSES[c])
+          return stack.pop == o
+        end
+      }
+      stack.empty?
+    },
+  },
+  {
+    # https://github.com/exercism/problem-specifications/pull/1300
+    name: 'stack, but returns too early guarded',
+    should_fail: true,
+    f: ->(i, _) {
+      stack = []
+      i['value'].each_char { |c|
+        stack << c if BracketMatcher::PAIRS.has_key?(c)
+        if (o = BracketMatcher::CLOSES[c])
+          return false unless stack.pop == o
+          return true if stack.empty?
+        end
+      }
+      stack.empty?
+    },
+  },
+  {
+    name: 'stack with garbage remaining',
+    should_fail: true,
+    f: ->(i, _) {
+      stack = []
+      i['value'].each_char { |c|
+        stack << c if BracketMatcher::PAIRS.has_key?(c)
+        if (o = BracketMatcher::CLOSES[c])
+          return false unless stack.pop == o
+        end
+      }
+      true
+    },
+  },
+  {
+    # https://github.com/exercism/problem-specifications/pull/1392
+    name: 'stack but extra closes are ignored',
+    should_fail: true,
+    f: ->(i, _) {
+      stack = []
+      i['value'].each_char { |c|
+        stack << c if BracketMatcher::PAIRS.has_key?(c)
+        if (o = BracketMatcher::CLOSES[c])
+          return false if stack.pop&.!=(o)
+        end
+      }
+      stack.empty?
+    },
+  },
+  {
+    # https://github.com/exercism/problem-specifications/pull/1657
+    name: 'stack but ignores all results except the last',
+    should_fail: true,
+    f: ->(i, _) {
+      stack = []
+      i['value'].each_char.reduce(true) { |_, c|
+        if (o = BracketMatcher::CLOSES[c])
+          stack.pop == o
+        else
+          stack << c if BracketMatcher::PAIRS.has_key?(c)
+          stack.empty?
+        end
+      }
+    },
+  },
+  {
+    name: 'count only',
+    should_fail: true,
+    f: ->(i, _) {
+      open = BracketMatcher::PAIRS.transform_values { 0 }
+      i['value'].each_char { |c|
+        open[c] += 1 if open.has_key?(c)
+        if (o = BracketMatcher::CLOSES[c])
+          return false if open[o] == 0
+          open[o] -= 1
+        end
+      }
+      open.values.all?(&:zero?)
+    },
+  },
+  {
+    # https://github.com/exercism/problem-specifications/pull/2071
+    name: 'count only, but also checks last opened',
+    should_fail: true,
+    f: ->(i, _) {
+      open = BracketMatcher::PAIRS.transform_values { 0 }
+      last_opened = nil
+      i['value'].each_char { |c|
+        if open.has_key?(c)
+          last_opened = c
+          open[c] += 1
+        end
+        if (o = BracketMatcher::CLOSES[c])
+          return false if open[o] == 0
+          return false if last_opened &.!= o
+          last_opened = nil
+          open[o] -= 1
+        end
+      }
+      open.values.all?(&:zero?)
+    },
+  },
+  {
+    # https://github.com/exercism/problem-specifications/pull/2071
+    name: 'count only, but also checks first opened',
+    should_fail: true,
+    f: ->(i, _) {
+      open = BracketMatcher::PAIRS.transform_values { 0 }
+      first_opened = nil
+      i['value'].each_char { |c|
+        if open.has_key?(c)
+          first_opened ||= c
+          open[c] += 1
+        end
+        if (o = BracketMatcher::CLOSES[c])
+          return false if open[o] == 0
+          open[o] -= 1
+          if open.values.all?(&:zero?)
+            return false if first_opened != BracketMatcher::CLOSES[c]
+            first_opened = nil
+          end
+        end
+      }
+      open.values.all?(&:zero?)
+    },
+  },
+])
