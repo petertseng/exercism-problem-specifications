@@ -33,3 +33,39 @@ end
 json['cases'].zip(props) { |cs, (prop, f)|
   verify(cs['cases'], property: prop) { |i, _| f[i] }
 }
+
+multi_verify(json['cases'][props.keys.index('concat')]['cases'], property: 'concat', implementations: [
+  {
+    # https://github.com/exercism/problem-specifications/pull/1240
+    name: 'full flatten instead of concat',
+    should_fail: true,
+    f: ->(i, _) { i['lists'].flatten },
+  },
+])
+
+[
+  ['foldl', 'foldr'],
+  ['foldr', 'foldl'],
+].each { |a, b|
+  cases = json['cases'][props.keys.index(a)]
+  multi_verify(cases['cases'], property: a, implementations: [
+    {
+      name: "using #{a} for #{b}",
+      should_fail: true,
+      f: ->(i, _) { props.fetch(b)[i] },
+    },
+    {
+      name: "using #{a} + reverse for #{b}",
+      should_fail: true,
+      f: ->(i, _) {
+        begin
+          props.fetch(b)[i.merge('list' => i['list'].reverse)]
+        rescue ZeroDivisionError => e
+          # That's fine, return it to fail the test as expected.
+          # (Don't raise it since all exceptions are rejected)
+          e
+        end
+      },
+    },
+  ])
+}
