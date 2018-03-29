@@ -53,6 +53,20 @@ end
 
 json = JSON.parse(File.read(File.join(__dir__, 'canonical-data.json')))
 
-verify(json['cases'].flat_map { |c| c['cases'] }, property: 'total') { |i, _|
-  best_price(i['basket'])
-}
+multi_verify(json['cases'].flat_map { |c| c['cases'] }, property: 'total', implementations: [
+  {
+    name: 'correct',
+    f: ->(i, _) { best_price(i['basket']) },
+  },
+  {
+    name: 'greedy',
+    should_fail: true,
+    f: ->(i, _) {
+      counts = by_count(i['basket'])
+      next 0 if i['basket'].empty?
+      (1..counts.values.max).sum { |n|
+        price([[nil] * counts.count { |_, v| v >= n }])
+      }
+    },
+  },
+])
