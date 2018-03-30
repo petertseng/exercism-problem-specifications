@@ -46,10 +46,22 @@ class Cell
 end
 
 class InputCell < Cell
+  def initialize(initial_value, broken: false)
+    super(initial_value)
+    @broken = broken
+  end
+
   def value=(new_value)
     @value = new_value
-    @dependencies.each(&:update_dependencies)
-    @dependencies.each(&:fire_callbacks)
+    if @broken
+      @dependencies.each { |d|
+        d.update_dependencies
+        d.fire_callbacks
+      }
+    else
+      @dependencies.each(&:update_dependencies)
+      @dependencies.each(&:fire_callbacks)
+    end
   end
 end
 
@@ -91,13 +103,11 @@ class ComputeCell < Cell
   end
 end
 
-# Not the best fit for verify, since we just dispatch on operation and raise, accepting if we get to the end.
-# However, this will change with the schema anyway, so we don't care.
-verify(cases, accept: ->(_, _) { true }, property: 'react') { |i, _|
-  cells = i['cells'].each_with_object({}) { |cell_spec, acc_cells|
+def cells(cell_specs, broken: false)
+  cell_specs.each_with_object({}) { |cell_spec, acc_cells|
     acc_cells[cell_spec.fetch('name')] = case cell_spec['type']
     when 'input'
-      InputCell.new(cell_spec.fetch('initial_value'))
+      InputCell.new(cell_spec.fetch('initial_value'), broken: broken)
     when 'compute'
       inputs = cell_spec['inputs'].map { |input| acc_cells.fetch(input) }
       case (f = cell_spec['compute_function'])
@@ -129,14 +139,16 @@ verify(cases, accept: ->(_, _) { true }, property: 'react') { |i, _|
     else raise "unknown cell type #{cell_spec['type']}"
     end
   }
+end
 
+def run_ops(ops, cells)
   callbacks = {}
 
-  i['operations'].each { |op|
+  ops.each { |op|
     case op['type']
     when 'expect_cell_value'
       cell = cells[op['cell']]
-      raise "cell #{op['cell']} had #{cell.value} instead of #{op['value']}" if cell.value != op['value']
+      raise TestFailure, "cell #{op['cell']} had #{cell.value} instead of #{op['value']}" if cell.value != op['value']
     when 'set_value'
       cells[op['cell']].value = op['value']
     when 'add_callback'
@@ -148,11 +160,22 @@ verify(cases, accept: ->(_, _) { true }, property: 'react') { |i, _|
       }
     when 'expect_callback_values'
       observed = callbacks[op['callback']][:vals]
-      raise "callback #{op['callback']} had #{observed} instead of #{op['values']}" if observed != op['values']
+      raise TestFailure, "callback #{op['callback']} had #{observed} instead of #{op['values']}" if observed != op['values']
       observed.clear
     when 'remove_callback'
       cells[op['cell']].remove_callback(callbacks[op['name']][:id])
     else raise "Unknown op #{op['type']}"
     end
   }
-}
+end
+
+# Not the best fit for verify, since we just dispatch on operation and raise, accepting if we get to the end.
+# However, this will change with the schema anyway, so we don't care.
+multi_verify(cases, accept: ->(_, _) { true }, property: 'react', implementations: [false, true].map { |broken| {
+  name: broken ? 'broken' : 'correct',
+  should_fail: broken,
+  f: ->(i, _) {
+    cells = cells(i['cells'], broken: broken)
+    run_ops(i['operations'], cells)
+  }
+}})
