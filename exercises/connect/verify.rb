@@ -54,7 +54,7 @@ class Board
   end
 
   def winner
-    @winner ||= (x_wins? ? ?X : o_wins? ? ?O : '').freeze
+    @winner ||= "#{?X if x_wins?}#{?O if o_wins?}".freeze
   end
 end
 
