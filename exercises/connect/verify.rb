@@ -60,6 +60,16 @@ end
 
 json = JSON.parse(File.read(File.join(__dir__, 'canonical-data.json')))
 
-verify(json['cases'], property: 'winner') { |i, _|
-  Board.new(i['board'], Board::DIRECTIONS).winner
+dir_sets = [
+  ['all', Board::DIRECTIONS],
+] + Board::DIRECTIONS.map { |exclude|
+  ["without #{exclude}", Board::DIRECTIONS - [exclude]]
+} + [[-1, -1], [1, 1]].map { |add|
+  ["with #{add}", Board::DIRECTIONS + [add]]
 }
+
+multi_verify(json['cases'], property: 'winner', implementations: dir_sets.map { |name, ds| {
+  name: name,
+  should_fail: ds.size != Board::DIRECTIONS.size,
+  f: ->(i, c) { Board.new(i['board'], ds).winner },
+}})
