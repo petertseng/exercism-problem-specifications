@@ -45,7 +45,7 @@ class Board
 
   def neighbours((r, c), player)
     @directions.map { |dr, dc| [r + dr, c + dc].freeze }.select { |neighbour|
-      at(*neighbour) == player
+      neighbour.none?(&:negative?) && at(*neighbour) == player
     }
   end
 
