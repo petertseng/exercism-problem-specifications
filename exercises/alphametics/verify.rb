@@ -12,17 +12,16 @@ class Alphametics
     solutions.first
   end
 
-  DIGITS = Set.new(0..9).freeze
-
   def self.solutions(terms, sum)
     terms = terms.map { |term| term.map(&:freeze).freeze }.freeze
     sum = sum.map(&:freeze).freeze
     nines = terms.flatten.uniq.to_h { |l| [l, 9] }.freeze
     all_letters = Set.new(terms.flatten + sum).freeze
 
-    # Each element of sub_solutions is [assignment, carry]
-    # where carry is the value carried FROM the next column to be solved.
-    sub_solutions = [[{}, 0]]
+    # Each element of sub_solutions is [assignment, carry, used_digits]
+    # where carry is the value carried FROM the next column to be solved,
+    # and used_digits is a bitfield indicating which digits are used.
+    sub_solutions = [[{}, 0, 0]]
     prev_letters = Set.new
 
     cant_be_zero = Set.new(terms.map(&:first) + [sum.first]).freeze
@@ -31,7 +30,7 @@ class Alphametics
       zeroes = all_letters - cant_be_zero
       raise "Impossible number of letters: #{zeroes.to_a}" if zeroes.size != 1
       zero = zeroes.first
-      sub_solutions = [[{zero => 0}, 0]]
+      sub_solutions = [[{zero => 0}, 0, 1]]
       prev_letters << zero
     end
 
@@ -44,9 +43,10 @@ class Alphametics
       new_letters = (column_letters - prev_letters).to_a
       new_nonzeroes = (cant_be_zero & new_letters).map { |i| new_letters.index(i) }
 
-      sub_solutions = sub_solutions.flat_map { |sub_solution, carry_out|
+      sub_solutions = sub_solutions.flat_map { |sub_solution, carry_out, used_digits|
         possible_carries = column == 1 ? [0] : (0..max_carry_into(terms, column, nines.merge(sub_solution)))
-        unassigned_numbers = DIGITS - sub_solution.values
+        unassigned_bits = 0x3ff & ~used_digits
+        unassigned_numbers = (0..9).select { |i| unassigned_bits & (1 << i) != 0 }
         unassigned_numbers.to_a.permutation(new_letters.size).flat_map { |new_assigns|
           next [] if new_nonzeroes.any? { |digit| new_assigns[digit] == 0 }
           proposed = sub_solution.merge(new_letters.zip(new_assigns).to_h)
@@ -54,7 +54,7 @@ class Alphametics
           possible_carries.select { |carry_in|
             this_carry_out, this_col = (lhs + carry_in).divmod(10)
             carry_out == this_carry_out && this_col == rhs
-          }.map { |cin| [proposed, cin] }
+          }.map { |cin| [proposed, cin, new_assigns.map { |i| 1 << i }.reduce(used_digits, :|)] }
         }
       }
 
