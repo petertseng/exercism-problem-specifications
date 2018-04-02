@@ -13,10 +13,13 @@ class Alphametics
   end
 
   def self.solutions(terms, sum)
-    terms = terms.map { |term| term.map(&:freeze).freeze }.freeze
-    sum = sum.map(&:freeze).freeze
+    all_letters = terms.reduce(sum, :|).freeze
+    # Each letter will be represented by its index in all_letters
+    # (it seems it's faster to pass around the integers than the strings)
+    index = all_letters.each_with_index.to_h.freeze
+    terms = terms.map { |term| term.map(&index) }.freeze
+    sum = sum.map(&index).freeze
     nines = terms.flatten.uniq.to_h { |l| [l, 9] }.freeze
-    all_letters = Set.new(terms.flatten + sum).freeze
 
     # Each element of sub_solutions is [assignment, carry, used_digits]
     # where carry is the value carried FROM the next column to be solved,
@@ -27,7 +30,7 @@ class Alphametics
     cant_be_zero = Set.new(terms.map(&:first) + [sum.first]).freeze
     if cant_be_zero.size == 9
       # A rare occurrence, but helps in the biggest tests.
-      zeroes = all_letters - cant_be_zero
+      zeroes = Set.new(0..9) - cant_be_zero
       raise "Impossible number of letters: #{zeroes.to_a}" if zeroes.size != 1
       zero = zeroes.first
       sub_solutions = [[{zero => 0}, 0, 1]]
@@ -72,7 +75,9 @@ class Alphametics
       end
     }
 
-    sub_solutions.map(&:first)
+    sub_solutions.map(&:first).map { |assignment|
+      assignment.transform_keys { |k| all_letters[k] }
+    }
   end
 
   def self.max_carry_into(terms, column, assignment)
