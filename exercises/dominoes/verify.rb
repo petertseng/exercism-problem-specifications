@@ -34,14 +34,14 @@ def chain_with(dominoes, start_with:, end_with:)
 end
 
 def assert_equal(a, b, message)
-  raise "#{a} != #{b} #{message}" if a != b
+  raise TestFailure, "#{a} != #{b} #{message}" if a != b
 end
 
 def check(input, result)
   assert_equal(input.size, result.size, "#{input} => #{result} length mismatch")
   assert_equal(input.map(&:sort).sort, result.map(&:sort).sort, "#{input} => #{result} domino mismatch")
   result.zip(result.rotate).each_with_index { |((_a, b), (c, _d)), i|
-    raise "#{input} => #{result} - bad chain #{b} != #{c} at #{i}" if b != c
+    raise TestFailure, "#{input} => #{result} - bad chain #{b} != #{c} at #{i}" if b != c
   }
 end
 
@@ -61,7 +61,7 @@ should_raises = [
 should_raises.each_with_index { |should_raise, i|
   begin
     should_raise[]
-  rescue => e
+  rescue TestFailure => e
     puts "#{i} raised #{e}, OK"
   else
     raise "#{i} didn't raise"
@@ -72,12 +72,51 @@ puts
 
 json = JSON.parse(File.read(File.join(__dir__, 'canonical-data.json')))
 
-verify(json['cases'], accept: ->(c, (can_chain, result)) {
+multi_verify(json['cases'], accept: ->(c, (can_chain, result)) {
   want = c['expected']
   # Extra paranoid that we do something wrong, so print
   input = c['input']['dominoes']
-  puts "#{input} => #{result.inspect}"
-  want == can_chain && (!want || check(input.dup, result))
-}, property: 'canChain') { |i, _|
-  chain(i['dominoes'].dup)
-}
+  want == can_chain && (!want || (
+    begin
+      check(input.dup, result)
+    rescue TestFailure => e
+      puts e
+      false
+    end
+  ))
+}, property: 'canChain', implementations: [
+  {
+    name: 'correct',
+    f: ->(i, _) {
+      chain(i['dominoes'].dup)
+    }
+  },
+  {
+    name: 'input',
+    should_fail: true,
+    f: -> (i, c) {
+      [!!c['expected'], c['expected'] ? i['dominoes'].dup : nil]
+    }
+  },
+  {
+    name: 'always 1, 1',
+    should_fail: true,
+    f: -> (i, c) {
+      [!!c['expected'], c['expected'] ? [[1, 1]] : nil]
+    }
+  },
+  {
+    name: 'always 1, 2',
+    should_fail: true,
+    f: -> (i, c) {
+      [!!c['expected'], c['expected'] ? [[1, 2]] : nil]
+    }
+  },
+  {
+    name: 'always 1, 1 times length',
+    should_fail: true,
+    f: -> (i, c) {
+      [!!c['expected'], c['expected'] ? [[1, 1]] * i['dominoes'].size : nil]
+    }
+  },
+])
