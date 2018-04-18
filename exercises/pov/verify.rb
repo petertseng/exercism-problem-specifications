@@ -58,19 +58,51 @@ json = JSON.parse(File.read(File.join(__dir__, 'canonical-data.json')))
 
 raise "There should be exactly two cases, not #{json['cases'].size}" if json['cases'].size != 2
 
-verify(json['cases'][0]['cases'], accept: ->(c, ans) {
+multi_verify(json['cases'][0]['cases'], accept: ->(c, ans) {
   [
     ->(x) { x.label },
     ->(x) { x.edges.sort },
   ].all? { |f|
     equal_on(ans, c['expected'], f)
   }
-}, property: 'fromPov') { |i, _|
-  tree = i['tree'].freeze
-  tree.reroot(i['from'])
-}
+}, property: 'fromPov', implementations: [
+  {
+    name: 'cps',
+    f: ->(i, _) {
+      tree = i['tree'].freeze
+      tree.reroot(i['from'])
+    }
+  },
+  {
+    name: 'find path then reverse links',
+    f: ->(i, _) {
+      tree = i['tree'].freeze
+      path = tree.path(from: tree.label, to: i['from'])
+      path&.drop(1)&.each { |child_label|
+        tree = tree.as_child_of(tree.children.find { |c| c.label == child_label })
+      } && tree
+    }
+  },
+])
 
-verify(json['cases'][1]['cases'], property: 'pathTo') { |i, _|
-  tree = i['tree'].freeze
-  tree.path(from: i['from'], to: i['to'])
-}
+multi_verify(json['cases'][1]['cases'], property: 'pathTo', implementations: [
+  {
+    name: 'correct',
+    f: ->(i, _) {
+      tree = i['tree'].freeze
+      tree.path(from: i['from'], to: i['to'])
+    },
+  },
+  {
+    # https://github.com/exercism/problem-specifications/pull/1227
+    name: 'always root',
+    should_fail: true,
+    f: ->(i, _) {
+      tree = i['tree'].freeze
+      return nil unless (first_half = tree.path(from: tree.label, to: i['from']))
+      return nil unless (second_half = tree.path(from: tree.label, to: i['to']))
+      # drop 1 to remove the duplicate root
+      first_half.reverse + second_half.drop(1)
+    },
+  },
+])
