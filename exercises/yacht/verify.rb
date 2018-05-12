@@ -31,19 +31,54 @@ CATEGORIES = {
 }.freeze
 untested_categories = Set.new(CATEGORIES.keys)
 
-verify(json['cases'], property: 'score') { |i, _|
-  dice = i['dice']
-  rank_count = dice.group_by(&:itself).transform_values(&:size).freeze
-  by_count = rank_count.keys.group_by(&rank_count)
+IMPLS = {
+  'correct' => {},
+  '4oak only accept four' => {
+    'four of a kind' => ->(hand) {
+      hand[:by_count][4]&.first&.*(4) || 0
+    },
+  },
+  'no pairs for straight' => {
+    'little straight' => ->(hand) {
+      hand[:distinct_counts].size == 5 ? 30 : 0
+    },
+    'big straight' => ->(hand) {
+      hand[:distinct_counts].size == 5 ? 30 : 0
+    },
+  },
+  'missing number for straight' => {
+    'little straight' => ->(hand) {
+      hand[:rank_count].has_key?(6) ? 0 : 30
+    },
+    'big straight' => ->(hand) {
+      hand[:rank_count].has_key?(1) ? 0 : 30
+    },
+  },
+  # https://github.com/exercism/problem-specifications/pull/1232
+  'two uniques for full house' => {
+    'full house' => ->(hand) {
+      hand[:distinct_counts].size == 2 ? hand[:total] : 0
+    },
+  },
+}.freeze
 
-  untested_categories.delete(i['category'])
+multi_verify(json['cases'], property: 'score', implementations: IMPLS.map { |name, merge| {
+  name: name,
+  should_fail: !merge.empty?,
+  f: ->(i, _) {
+    dice = i['dice']
+    rank_count = dice.group_by(&:itself).transform_values(&:size).freeze
+    by_count = rank_count.keys.group_by(&rank_count)
 
-  CATEGORIES.fetch(i['category'])[{
-    rank_count: rank_count,
-    total: rank_count.sum { |k, v| k * v },
-    by_count: by_count,
-    distinct_counts: by_count.flat_map { |k, vs| [k] * vs.size }.freeze,
-  }]
-}
+    untested_categories.delete(i['category'])
+
+    CATEGORIES.merge(merge).fetch(i['category'])[{
+      rank_count: rank_count,
+      total: rank_count.sum { |k, v| k * v },
+      by_count: by_count,
+      distinct_counts: by_count.flat_map { |k, vs| [k] * vs.size }.freeze,
+    }]
+  },
+}})
 
 raise "#{untested_categories} were not tested" unless untested_categories.empty?
