@@ -390,6 +390,19 @@
           "expected": [11]
         },
         {
+          "description": "we need to go deeper when resolving definitions",
+          "property": "evaluate",
+          "input": {
+            "instructions": [
+              ": foo 5 ;",
+              ": bar foo ;",
+              ": baz bar ;",
+              "baz"
+            ]
+          },
+          "expected": [5]
+        },
+        {
           "description": "cannot redefine numbers",
           "property": "evaluate",
           "input": {
