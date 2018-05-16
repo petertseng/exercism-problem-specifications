@@ -90,8 +90,24 @@ class Forth
   end
 end
 
+class BadForth < Forth
+  def store_def(target, definition)
+    @user_words[target.downcase] = definition
+  end
+end
+
 json = JSON.parse(File.read(File.join(__dir__, 'canonical-data.json')))
 
-verify(json['cases'].flat_map { |c| c['cases'] }, property: 'evaluate') { |i, _|
-  i['instructions'].each_with_object(Forth.new) { |s, f| f.eval(s) }.stack
-}
+multi_verify(json['cases'].flat_map { |c| c['cases'] }, property: 'evaluate', implementations: [Forth, BadForth].map { |forth|
+  {
+    name: forth,
+    should_fail: forth != Forth,
+    f: ->(i, _) {
+      begin
+        i['instructions'].each_with_object(forth.new) { |s, f| f.eval(s) }.stack
+      rescue SystemStackError
+        raise TestFailure
+      end
+    }
+  }
+})

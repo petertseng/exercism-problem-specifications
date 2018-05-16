@@ -427,6 +427,20 @@
           "expected": [11]
         },
         {
+          "uuid": "469481a2-75b2-438d-b27b-18a3879ba01a",
+          "description": "we need to go deeper when resolving definitions",
+          "property": "evaluate",
+          "input": {
+            "instructions": [
+              ": foo 5 ;",
+              ": bar foo ;",
+              ": baz bar ;",
+              "baz"
+            ]
+          },
+          "expected": [5]
+        },
+        {
           "uuid": "35958cee-a976-4a0f-9378-f678518fa322",
           "description": "cannot redefine non-negative numbers",
           "property": "evaluate",
