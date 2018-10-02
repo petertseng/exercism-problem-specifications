@@ -17,47 +17,17 @@ dirs = DIRS.keys
 RIGHT = dirs.zip(dirs.rotate(1)).to_h.each_value(&:freeze).freeze
 LEFT = dirs.zip(dirs.rotate(-1)).to_h.each_value(&:freeze).freeze
 
-module Robot refine Hash do
-  def right
-    merge('direction' => RIGHT[self['direction']])
-  end
+cases = by_property(json['cases'].flat_map { |c| c['cases'] }, %w(create move))
 
-  def left
-    merge('direction' => LEFT[self['direction']])
-  end
+verify(cases['create'], property: 'create') { |i, _| i }
 
-  def advance
-    merge('position' => DIRS[self['direction']][self['position']])
-  end
-end end
-
-using Robot
-
-props = {
-  'create' => ->(c) { c },
-  'turnRight' => ->(c) { c.right },
-  'turnLeft' => ->(c) { c.left },
-  'advance' => ->(c) { c.advance },
-  'instructions' => ->(c) { c['instructions'].each_char.reduce(c) { |r, i|
-    case i
-    when ?A; r.advance
-    when ?L; r.left
-    when ?R; r.right
-    else raise "Bad instruction #{i}"
+verify(cases['move'], property: 'move') { |i, _|
+  i['instructions'].each_char.reduce(i) { |r, c|
+    case c
+    when ?A; r.merge('position' => DIRS[r['direction']][r['position']])
+    when ?L; r.merge('direction' => LEFT[r['direction']])
+    when ?R; r.merge('direction' => RIGHT[r['direction']])
+    else raise "Bad instruction #{c}"
     end
-  }},
-}.freeze
-
-if json['cases'].size != props.size
-  keys = props.keys
-  [json['cases'].size, props.size].max.times { |n|
-    puts '%12s / %12s' % [json.dig('cases', n, 'cases', 0, 'property'), keys[n]]
-  }
-  raise 'Length mismatch'
-end
-
-json['cases'].zip(props) { |cs, (prop, f)|
-  verify(cs['cases'], accept: ->(c, ans) { c['expected'] <= ans }, property: prop) { |i, _|
-    f[i]
-  }
+  }.select { |k, _| %w(position direction).include?(k) }
 }
