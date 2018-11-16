@@ -7,6 +7,20 @@ def mines(board)
   }
 end
 
+def mirrored_mines(board)
+  # https://github.com/exercism/haskell/pull/284
+  # https://github.com/exercism/haskell/pull/770
+  # actually the Haskell impl mirrored the output mine locations too.
+  # this one only mirrors the counts, not the output mines.
+  height = board.size
+  width = board[0].size
+  # fundamental problem was `listArray (1, 1) (X, Y)`
+  # That counts in order (1, 1), (1, 2) ... (1, Y), (2, 1) ...
+  # But the `concat` meant that it should be X increasing first.
+  new_coords = (0...width).to_a.product((0...height).to_a).map(&:reverse)
+  board.join.each_char.zip(new_coords).select { |c, _| c == ?* }.map(&:last)
+end
+
 def annotate(board, mines)
   return board if board.empty?
   width = board[0].size
@@ -31,6 +45,18 @@ verify(json['cases'].map { |c|
   i['minefield']
 }
 
-verify(json['cases'], property: 'annotate') { |i, _|
-  annotate(i['minefield'], method(:mines))
-}
+multi_verify(json['cases'], property: 'annotate', implementations: [
+  {
+    name: 'correct',
+    f: ->(i, _) {
+      annotate(i['minefield'], method(:mines))
+    }
+  },
+  {
+    name: 'mirrored',
+    should_fail: true,
+    f: ->(i, _) {
+      annotate(i['minefield'], method(:mirrored_mines))
+    }
+  },
+])
