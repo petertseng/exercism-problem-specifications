@@ -1,0 +1,268 @@
+{
+  "track_id": "reasonml",
+  "language": "ReasonML",
+  "active": true,
+  "blurb": "ReasonML is a strongly typed functional language which compiles to both Javascript and native.",
+  "ignore_pattern": "[Ee]xample",
+  "solution_pattern": "[Ee]xample",
+  "test_pattern": "[Tt]est",
+  "exercises": [
+    {
+      "slug": "hello-world",
+      "uuid": "63d72b81-c7a4-4a94-8224-69f4c68cc374",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "setting_up_reasonml_dev_environment",
+        "strings"
+      ]
+    },
+    {
+      "slug": "leap",
+      "uuid": "94d63245-0c40-40e4-952f-83ee4ef87b33",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "booleans",
+        "integers"
+      ]
+    },
+    {
+      "slug": "space-age",
+      "uuid": "9e8b7922-fd95-4797-af1b-736a6179821d",
+      "core": false,
+      "unlocked_by": "leap",
+      "difficulty": 2,
+      "topics": [
+        "enum_types",
+        "floating_point_arithmetic",
+        "fun_expressions"
+      ]
+    },
+    {
+      "slug": "bob",
+      "uuid": "88a4ce55-2c79-416c-930d-9e8923e16e45",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "control_flow_conditionals",
+        "pattern_recognition",
+        "regular_expressions",
+        "strings"
+      ]
+    },
+    {
+      "slug": "rna-transcription",
+      "uuid": "9690c216-d999-4b44-b73c-b7a8d776cf5d",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "list_map_function",
+        "lists",
+        "variants"
+      ]
+    },
+    {
+      "slug": "word-count",
+      "uuid": "304edc6f-635c-4fd9-9b05-6a77e1929856",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "list_map_function",
+        "lists",
+        "pattern_recognition",
+        "regular_expressions",
+        "variants"
+      ]
+    },
+    {
+      "slug": "raindrops",
+      "uuid": "d8ee28f4-bc35-408f-8380-a2eb54dec5b0",
+      "core": false,
+      "unlocked_by": "bob",
+      "difficulty": 2,
+      "topics": [
+        "fun_expressions",
+        "list_map_function"
+      ]
+    },
+    {
+      "slug": "armstrong-numbers",
+      "uuid": "cc660762-4006-40c2-bc3b-a7bb4ac69202",
+      "core": false,
+      "unlocked_by": "leap",
+      "difficulty": 2,
+      "topics": [
+        "algorithms",
+        "arrays",
+        "folding",
+        "math"
+      ]
+    },
+    {
+      "slug": "anagram",
+      "uuid": "1ddb534c-54e9-44a2-bd5f-fdcded7b03c8",
+      "core": false,
+      "unlocked_by": "word-count",
+      "difficulty": 3,
+      "topics": [
+        "filtering",
+        "strings"
+      ]
+    },
+    {
+      "slug": "pangram",
+      "uuid": "dddf877a-a8d4-45d7-8543-882c08bad2e8",
+      "core": false,
+      "unlocked_by": "word-count",
+      "difficulty": 3,
+      "topics": [
+        "strings"
+      ]
+    },
+    {
+      "slug": "isogram",
+      "uuid": "4e7e7b4b-b279-47c2-9d5a-3c44f7bbeb34",
+      "core": false,
+      "unlocked_by": "word-count",
+      "difficulty": 3,
+      "topics": [
+        "lists",
+        "strings"
+      ]
+    },
+    {
+      "slug": "phone-number",
+      "uuid": "2721c31b-773e-43c5-93ab-f704d62e5cde",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "regular_expressions",
+        "strings"
+      ]
+    },
+    {
+      "slug": "roman-numerals",
+      "uuid": "fb891c45-82f1-422d-ac4e-00409668d6a7",
+      "core": false,
+      "unlocked_by": "leap",
+      "difficulty": 3,
+      "topics": [
+        "strings"
+      ]
+    },
+    {
+      "slug": "binary-search",
+      "uuid": "eb635d37-a70b-47b2-883b-8ec9ca6098ef",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "arrays",
+        "recursion"
+      ]
+    },
+    {
+      "slug": "run-length-encoding",
+      "uuid": "1c8245de-3ae2-4b59-83a9-d34c540f67f0",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 5,
+      "topics": [
+        "converting_strings_to_ints",
+        "strings"
+      ]
+    },
+    {
+      "slug": "minesweeper",
+      "uuid": "a98cd43d-a575-429b-bb33-00748b5ef2c4",
+      "core": false,
+      "unlocked_by": "binary-search",
+      "difficulty": 5,
+      "topics": [
+        "arrays",
+        "strings"
+      ]
+    },
+    {
+      "slug": "change",
+      "uuid": "3526ae52-5962-43d6-ae83-dd6a9ca6e25b",
+      "core": false,
+      "unlocked_by": "binary-search",
+      "difficulty": 5,
+      "topics": [
+        "dynamic_programming",
+        "integers",
+        "recursion"
+      ]
+    },
+    {
+      "slug": "acronym",
+      "uuid": "c6623707-e7e9-4ce9-9440-8bb87696bb73",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "regular_expressions",
+        "strings"
+      ]
+    },
+    {
+      "slug": "all-your-base",
+      "uuid": "364cafb4-ada0-4f9f-87f0-c6cbf603fcba",
+      "core": false,
+      "unlocked_by": "binary-search",
+      "difficulty": 2,
+      "topics": [
+        "algorithms",
+        "folding",
+        "integers",
+        "lists",
+        "math"
+      ]
+    },
+    {
+      "slug": "accumulate",
+      "uuid": "f3025c02-fc67-4354-8e0a-a76e9c5cef4e",
+      "core": false,
+      "unlocked_by": "rna-transcription",
+      "difficulty": 2,
+      "topics": [
+        "algorithms",
+        "folding",
+        "lists"
+      ]
+    },
+    {
+      "slug": "allergies",
+      "uuid": "f964d022-1466-4c76-8877-0b0dda25578b",
+      "core": false,
+      "unlocked_by": "bob",
+      "difficulty": 4,
+      "topics": [
+        "arrays",
+        "bitwise_operations",
+        "integers",
+        "lists"
+      ]
+    },
+    {
+      "slug": "protein-translation",
+      "uuid": "c8e92ec5-d5e5-40dd-98ce-acc7f7263efe",
+      "core": false,
+      "unlocked_by": "rna-transcription",
+      "difficulty": 4,
+      "topics": [
+        "data_transform",
+        "hash_map_lookup",
+        "lists"
+      ]
+    }
+  ]
+}

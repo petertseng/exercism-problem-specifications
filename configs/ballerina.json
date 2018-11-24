@@ -1,0 +1,121 @@
+{
+  "track_id": "ballerina",
+  "language": "Ballerina",
+  "active": true,
+  "blurb": "Ballerina is a cloud-native programming language that incorporates fundamental concepts of distributed system integration into the language and offers a type safe, concurrent environment to implement microservices with distributed transactions, reliable messaging, stream processing, and workflows.",
+  "ignore_pattern": "[Ee]xample",
+  "solution_pattern": "reference",
+  "test_pattern": "[Tt]est",
+  "exercises": [
+    {
+      "slug": "hello-world",
+      "uuid": "91441035-67fa-40e3-a4d5-39476801172a",
+      "core": true,
+      "auto_approve": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "strings"
+      ]
+    },
+    {
+      "slug": "hello-world-service",
+      "uuid": "fceb7721-3d30-4aac-b4dd-573b601f6e1e",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "http",
+        "services",
+        "strings"
+      ]
+    },
+    {
+      "slug": "greeting-service",
+      "uuid": "000f851f-08ad-4e44-9ede-ccc817221076",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "http",
+        "services",
+        "strings"
+      ]
+    },
+    {
+      "slug": "service-invocation",
+      "uuid": "90925a7d-e840-4e50-bb16-5ad8d55c90ee",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "http",
+        "services",
+        "strings",
+        "log"
+      ]
+    },
+    {
+      "slug": "legacy-service-client",
+      "uuid": "8c8cafdd-7cd6-46fd-9c9e-033dc9631c80",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "http",
+        "union type",
+        "match",
+        "error-handling"
+      ]
+    },
+    {
+      "slug": "calculator-service",
+      "uuid": "259fa5f6-1baf-4def-90a4-c45aa321564a",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "json",
+        "services",
+        "http",
+        "types"]
+    },
+    {
+      "slug": "order-management",
+      "uuid": "d28068df-bccd-4aa1-b2eb-47b16d26221d",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "http",
+        "json",
+        "map"]
+    },
+    {
+      "slug": "service-composition",
+      "uuid": "ef4dc26f-137c-4f76-9b4b-d25d6251c515",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 7,
+      "topics": [
+        "http",
+        "json",
+        "endpoints",
+        "match",
+        "error handling",
+        "types"]
+    }, 
+    {
+      "slug": "echo-world-service",
+      "uuid": "19dbfc2c-3e23-4a23-b7b6-cac5dec6690c",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "http",
+        "services",
+        "strings"
+      ]
+    }
+  ]
+}

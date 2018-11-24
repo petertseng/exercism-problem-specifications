@@ -1,0 +1,218 @@
+{
+  "language": "D",
+  "active": true,
+  "blurb": "",
+  "checklist_issue": 6,
+  "test_pattern": "source.*[.]d",
+  "exercises": [
+    {
+      "slug": "hello-world",
+      "uuid": "a91c2216-9331-4485-ae4b-190ee9e2a7f8",
+      "core": false,
+      "auto_approve": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "language_basics"
+      ]
+    },
+    {
+      "slug": "leap",
+      "uuid": "9f52d6a7-1002-4614-afc3-cce03187c59b",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "language_basics"
+      ]
+    },
+    {
+      "slug": "gigasecond",
+      "uuid": "8c976f92-fcfa-45f0-9bd1-2353822e51e8",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "language_basics",
+        "time"
+      ]
+    },
+    {
+      "slug": "rna-transcription",
+      "uuid": "208f9a34-bdf2-4c2b-b102-f0ef1a5d04fe",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "control_flow_foreach",
+        "error_handling",
+        "string_manipulation"
+      ]
+    },
+    {
+      "slug": "raindrops",
+      "uuid": "f6d21f86-b4d3-4dec-b830-8e19e1018548",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "control_flow_if_statements",
+        "language_basics"
+      ]
+    },
+    {
+      "slug": "bob",
+      "uuid": "99ee69a6-2c0f-4c7c-86f9-bee1633b4f51",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "control_flow_if_statements",
+        "string_manipulation"
+      ]
+    },
+    {
+      "slug": "etl",
+      "uuid": "dc631076-1eb8-4120-bd8f-dccf33df9a3f",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "associative_arrays",
+        "control_flow_foreach",
+        "string_manipulation"
+      ]
+    },
+    {
+      "slug": "hamming",
+      "uuid": "87c87444-2349-40ab-a9a3-c0f0d2e200d6",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "control_flow_foreach",
+        "error_handling"
+      ]
+    },
+    {
+      "slug": "nucleotide-count",
+      "uuid": "23b23ac0-62ef-4a22-b634-d64206c8a226",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "associative_arrays",
+        "classes",
+        "parsing"
+      ]
+    },
+    {
+      "slug": "robot-name",
+      "uuid": "d7dd5df3-ff36-47ee-88db-e0f974a4cb19",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "classes",
+        "random_numbers"
+      ]
+    },
+    {
+      "slug": "difference-of-squares",
+      "uuid": "d6c67e30-c950-40b6-b6db-0fa6df5652af",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "algorithms",
+        "control_flow_foreach",
+        "functional",
+        "math",
+        "template_metaprogramming"
+      ]
+    },
+    {
+      "slug": "roman-numerals",
+      "uuid": "5647c00e-d4be-4546-bac3-6a3e1670c2a1",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "conversions",
+        "functional",
+        "string_manipulation"
+      ]
+    },
+    {
+      "slug": "series",
+      "uuid": "14c3c478-9dc1-470b-8517-35c3ceac3f47",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "arrays",
+        "string_manipulation"
+      ]
+    },
+    {
+      "slug": "triangle",
+      "uuid": "c9acd967-fc2a-4c74-b584-2572ce690e71",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "control_flow_if_statements",
+        "language_basics"
+      ]
+    },
+    {
+      "slug": "crypto-square",
+      "uuid": "45afc532-3f6c-4b9e-90f6-c53a79551af1",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "algorithms",
+        "classes",
+        "string_manipulation"
+      ]
+    },
+    {
+      "slug": "circular-buffer",
+      "uuid": "2ba799a8-eab9-44a0-9b31-a10e72baa38b",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "class_templates",
+        "data_structures"
+      ]
+    },
+    {
+      "slug": "pangram",
+      "uuid": "a4cf4571-1f97-438c-9c02-3fe7c52ee25f",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "control_flow",
+        "language_basics",
+        "string_manipulation"
+      ]
+    },
+    {
+      "slug": "react",
+      "uuid": "31dd1e53-2b5e-4d40-ac4c-a68fe5e6635c",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 10,
+      "topics": [
+        "delegates",
+        "generics",
+        "higher_order_functions",
+        "nested_classes",
+        "reactive_programming"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,234 @@
+{
+  "language": "Racket",
+  "active": true,
+  "blurb": "",
+  "exercises": [
+    {
+      "slug": "hello-world",
+      "uuid": "4fb471fc-4e6d-486d-abf5-939e89f028fc",
+      "core": false,
+      "auto_approve": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "strings"
+      ]
+    },
+    {
+      "slug": "two-fer",
+      "uuid": "27ffc2d2-e950-40a1-90fa-a1f3eec4fd36",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "optional_values",
+        "text_formatting"
+      ]
+    },
+    {
+      "slug": "grains",
+      "uuid": "b5b537d0-7c5d-45e5-af1d-b4da4f32514b",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
+    },
+    {
+      "slug": "leap",
+      "uuid": "e84ac1ee-6e7e-40b4-826a-ed3d41890b83",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
+    },
+    {
+      "slug": "difference-of-squares",
+      "uuid": "a3d9a2bb-a80a-487f-b529-64e20f7cf9b5",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "math"
+      ]
+    },
+    {
+      "slug": "perfect-numbers",
+      "uuid": "72b2c36b-fcd5-4c8c-89e7-98bf24faaa3e",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "math"
+      ]
+    },
+    {
+      "slug": "gigasecond",
+      "uuid": "c7550977-bc29-47e9-9aeb-9e3ee34032b2",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
+    },
+    {
+      "slug": "bob",
+      "uuid": "3e5e67fa-991b-4120-abf0-6f10f9dfaca8",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
+    },
+    {
+      "slug": "collatz-conjecture",
+      "uuid": "28102e69-dad0-4f3c-8cdf-5a18a73178a4",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "math"
+      ]
+    },
+    {
+      "slug": "hamming",
+      "uuid": "f0a6e55d-6702-4043-bdcf-2ed99bf60645",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
+    },
+    {
+      "slug": "scrabble-score",
+      "uuid": "74d67f30-1f31-4289-a9bc-1bf69ec54ae2",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
+    },
+    {
+      "slug": "roman-numerals",
+      "uuid": "c5a747dc-f283-4cf6-8435-fde885f63089",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
+    },
+    {
+      "slug": "meetup",
+      "uuid": "72ac5f36-ec1b-465e-b359-1cc49efc262d",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "conditionals",
+        "dates",
+        "parsing",
+        "pattern_recognition",
+        "strings"
+      ]
+    },
+    {
+      "slug": "anagram",
+      "uuid": "67b41645-7a02-4c45-af55-86401db69eee",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
+    },
+    {
+      "slug": "rna-transcription",
+      "uuid": "2936d930-2359-44ea-8342-656016d3ec79",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
+    },
+    {
+      "slug": "etl",
+      "uuid": "7c1cdc16-30c8-460f-aa6a-cc0655436f22",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
+    },
+    {
+      "slug": "word-count",
+      "uuid": "b931f727-b5b1-4f42-9799-faca692dd32e",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
+    },
+    {
+      "slug": "phone-number",
+      "uuid": "aad41852-c939-4168-89c8-ae873892c5f9",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
+    },
+    {
+      "slug": "nucleotide-count",
+      "uuid": "9fbd3939-f71a-4506-bcc3-e9940d4027ed",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
+    },
+    {
+      "slug": "raindrops",
+      "uuid": "9795a374-30ae-492b-bcd7-1648ea5264b7",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
+    },
+    {
+      "slug": "grep",
+      "uuid": "37ab62d8-deb3-4fa4-8016-0b22f3d2f66d",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
+    },
+    {
+      "slug": "say",
+      "uuid": "0f64407b-0f01-4c4c-b721-fefdb8f98d16",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
+    },
+    {
+      "slug": "allergies",
+      "uuid": "881f83d7-1c80-4045-9a3f-def45c8f5764",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
+    },
+    {
+      "slug": "list-ops",
+      "uuid": "874b53f5-d9ef-4fd9-be62-3fe16692e565",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
+    },
+    {
+      "slug": "acronym",
+      "uuid": "daeb92dc-efea-4bea-b657-3383b1880e49",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
+    },
+    {
+      "slug": "accumulate",
+      "uuid": "b234225c-fcde-445f-9222-f80c25d0f499",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 0,
+      "topics": null,
+      "deprecated": true
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "language": "Haxe",
+  "active": false,
+  "blurb": "",
+  "checklist_issue": 2,
+  "test_pattern": "test.*Test[.]hx",
+  "exercises": [
+    {
+      "slug": "hello-world",
+      "uuid": "3596bbf7-66f0-49c0-8c3e-3472455f90c7",
+      "core": false,
+      "auto_approve": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
+    },
+    {
+      "slug": "bob",
+      "uuid": "46b447aa-b2b5-4f5c-ac73-8de47f897840",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
+    },
+    {
+      "slug": "leap",
+      "uuid": "d30952cf-0b7d-a980-9351-caedebfed16362c6a7a",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": null
+    }
+  ]
+}

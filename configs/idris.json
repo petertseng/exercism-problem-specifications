@@ -1,0 +1,65 @@
+{
+  "language": "Idris",
+  "active": false,
+  "blurb": "",
+  "exercises": [
+    {
+      "slug": "rna-transcription",
+      "uuid": "3640da6c-4f1d-483c-8990-de225fcb0b03",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "pattern_matching",
+        "vectors"
+      ]
+    },
+    {
+      "slug": "hello-world",
+      "uuid": "b4b0db87-75a2-4c81-897f-b27d1fd4a7d6",
+      "core": false,
+      "auto_approve": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "optional_values",
+        "text_formatting"
+      ]
+    },
+    {
+      "slug": "leap",
+      "uuid": "2c7ab2e7-d87a-41ee-a81e-7572d7872562",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "arithmetic",
+        "booleans",
+        "integers"
+      ]
+    },
+    {
+      "slug": "hamming",
+      "uuid": "7a1d481f-7f45-4646-81bc-7ca3c8cb5eb0",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "export_modifiers",
+        "vectors"
+      ]
+    },
+    {
+      "slug": "accumulate",
+      "uuid": "06242da7-4796-482a-a467-358b22128c32",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "functions",
+        "lists",
+        "map"
+      ]
+    }
+  ]
+}

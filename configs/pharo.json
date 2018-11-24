@@ -1,0 +1,86 @@
+{
+  "track_id": "pharo",
+  "language": "Pharo",
+  "active": false,
+  "blurb": "The immersive, modern, Smalltalk programming experience",
+  "solution_pattern": "\\.meta/solution/\\w+\\.class\\.st",
+  "test_pattern": "\\w+Test\\.class\\.st",
+  "exercises": [
+    {
+      "slug": "hello-world",
+      "uuid": "a1812b5e-2788-4ea6-b948-bfe54edeb0da",
+      "core": true,
+      "auto_approve": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "introduction"
+      ]
+    },
+    {
+      "slug": "two-fer",
+      "uuid": "9806fcc0-8505-4012-bd64-3f7468014df5",
+      "core": false,
+      "auto_approve": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 1,
+      "topics": [
+        "strings",
+        "text-formatting"
+      ]
+    },
+    {
+      "slug": "reverse-string",
+      "uuid": "bab40685-2f87-4d4f-8886-0a4d21a0d90d",
+      "core": true,
+      "auto_approve": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "strings",
+        "iteration",
+        "text-formatting"
+      ]
+    },
+    {
+      "slug": "acronym",
+      "uuid": "dc7b1fff-f0be-460d-b146-ee84c2acc10b",
+      "core": false,
+      "auto_approve": false,
+      "unlocked_by": "reverse-string",
+      "difficulty": 1,
+      "topics": [
+        "strings",
+        "iteration",
+        "parsing",
+        "text-formatting"
+      ]
+    },
+    {
+      "slug": "leap",
+      "uuid": "82b07f5c-119c-4250-8c07-a0a7e1a95458",
+      "core": true,
+      "auto_approve": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "booleans",
+        "conditionals",
+        "logic"
+      ]
+    },
+    {
+      "slug": "sum-of-multiples",
+      "uuid": "34b0900f-de21-4fef-b24b-f125b608e65e",
+      "core": true,
+      "auto_approve": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "iteration",
+        "filtering",
+        "math"
+      ]
+    }
+  ]
+}

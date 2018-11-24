@@ -1,0 +1,216 @@
+{
+  "language": "Crystal",
+  "active": true,
+  "blurb": "",
+  "test_pattern": "_spec.cr",
+  "exercises": [
+    {
+      "slug": "hello-world",
+      "uuid": "4078cf4d-4361-4c55-aa18-63a3fe269be1",
+      "core": false,
+      "auto_approve": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "hamming",
+      "uuid": "080b6ab1-576f-4566-a065-5aae761f51af",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "gigasecond",
+      "uuid": "16228cbe-49ff-4d15-b121-d84b40a56a66",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "rna-transcription",
+      "uuid": "99e661d7-7094-400f-a31d-48cf96d2cbc6",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "bob",
+      "uuid": "7ad02ecf-036c-4510-b6ad-93bf1d5f0d28",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "raindrops",
+      "uuid": "a1a95816-b9e8-480e-beca-477531cdaa4c",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "leap",
+      "uuid": "607eb4f7-2650-47e1-81b9-a6fc2f0367cd",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "triangle",
+      "uuid": "64f8e403-9a3d-4094-9114-f1bee88c072b",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "difference-of-squares",
+      "uuid": "19298c02-b34f-4f11-aad6-5da4838967a0",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "math"
+      ]
+    },
+    {
+      "slug": "pangram",
+      "uuid": "1546e974-866e-4d4d-bec5-d08f91c47fa3",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "largest-series-product",
+      "uuid": "ec55356b-61ab-4164-94d0-791133718fa8",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "math"
+      ]
+    },
+    {
+      "slug": "bracket-push",
+      "uuid": "b8a4ccaa-4676-4921-baad-ec194a429b75",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "sieve",
+      "uuid": "a2e06a49-1311-47eb-8d57-6fbc5abbe7e2",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "math"
+      ]
+    },
+    {
+      "slug": "roman-numerals",
+      "uuid": "45a2591a-493d-4bab-be64-847243b4554b",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "atbash-cipher",
+      "uuid": "7dc99d5e-95af-4f91-85d4-ddb4c9dbb758",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "anagram",
+      "uuid": "2df0796e-951d-4f10-8a2e-5c54f2443f10",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "react",
+      "uuid": "2da645e4-7e72-4377-a7ac-184b67ff8a63",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "acronym",
+      "uuid": "5373e713-f2ab-4b1e-b934-92969174bc48",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "binary",
+      "uuid": "d0c862a3-7d1f-4081-b378-f631ccf54fac",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "math"
+      ]
+    },
+    {
+      "slug": "binary-search-tree",
+      "uuid": "415605d8-cc98-4eb1-9467-5c970e69f137",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "algorithms",
+        "data_structures",
+        "recursion",
+        "trees"
+      ]
+    },
+    {
+      "slug": "run-length-encoding",
+      "uuid": "bed338cd-2308-4a15-9225-699d1d09ed49",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": []
+    },
+    {
+      "slug": "pascals-triangle",
+      "uuid": "1f04c451-a96a-4299-9386-6774b08f55ed",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "math"
+      ]
+    },
+    {
+      "slug": "forth",
+      "uuid": "c85a6334-2f76-44ce-8ca5-0e997cc65d03",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": []
+    },
+    {
+      "slug": "flatten-array",
+      "uuid": "85b2450c-727d-4b84-9904-02c37f385610",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": []
+    }
+  ]
+}

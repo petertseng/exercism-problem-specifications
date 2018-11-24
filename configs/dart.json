@@ -1,0 +1,198 @@
+{
+  "language": "Dart",
+  "active": true,
+  "blurb": "Dart is a general purpose programming language which has seen a rise in popularity for it's uses in mobile and web application development.",
+  "test_pattern": "_test\\.dart$",
+  "exercises": [
+    {
+      "slug": "hello-world",
+      "uuid": "6b868b7b-cac4-41ff-a855-21f596637845",
+      "core": true,
+      "auto_approve": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "control_flow_conditionals",
+        "optional_values",
+        "strings",
+        "text_formatting"
+      ]
+    },
+    {
+      "slug": "leap",
+      "uuid": "4bcfd789-dee6-4dd9-8524-076508504eda",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "booleans",
+        "integers",
+        "logic"
+      ]
+    },
+    {
+      "slug": "scrabble-score",
+      "uuid": "d74be875-bc1c-47a5-bf80-0c4c57ed200e",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "equality",
+        "strings"
+      ]
+    },
+    {
+      "slug": "armstrong-numbers",
+      "uuid": "4f650701-9568-4d95-9f72-be4bde2c90ec",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "equality",
+        "integers",
+        "logic",
+        "math",
+        "strings"
+      ]
+    },
+    {
+      "slug": "difference-of-squares",
+      "uuid": "c1cdab6f-c18c-4173-828a-2191151d20d4",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "integers",
+        "math"
+      ]
+    },
+    {
+      "slug": "word-count",
+      "uuid": "b74dde02-03d0-4165-8302-e8ba119b486b",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "control_flow_loops",
+        "lists",
+        "maps",
+        "regular_expressions"
+      ]
+    },
+    {
+      "slug": "bob",
+      "uuid": "615a83cc-a905-435a-a30e-f052b61cfd4c",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "control_flow_conditionals",
+        "pattern_recognition",
+        "polymorphism",
+        "regular_expressions",
+        "strings",
+        "unicode"
+      ]
+    },
+    {
+      "slug": "space-age",
+      "uuid": "c8bf7da7-d26d-48e8-a83b-1296972d2376",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "floating_point_numbers",
+        "integers",
+        "math",
+        "polymorphism"
+      ]
+    },
+    {
+      "slug": "hamming",
+      "uuid": "91c8033d-f40c-4a90-9ec9-7081f6eba8d2",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "equality",
+        "strings"
+      ]
+    },
+    {
+      "slug": "acronym",
+      "uuid": "3f8d18d4-4f31-405b-8aad-80f768b11db3",
+      "core": false,
+      "unlocked_by": "hamming",
+      "difficulty": 2,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "equality",
+        "regular_expressions",
+        "strings"
+      ]
+    },
+    {
+      "slug": "phone-number",
+      "uuid": "8649b2b4-02f6-4947-92b9-d1cc0d7c3594",
+      "core": false,
+      "unlocked_by": "hamming",
+      "difficulty": 2,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "regular_expressions"
+      ]
+    },
+    {
+      "slug": "gigasecond",
+      "uuid": "0c0511fd-59aa-4480-a7cd-4de0e9303b86",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "time"
+      ]
+    },
+    {
+      "slug": "raindrops",
+      "uuid": "3d4e326d-2419-4e93-ac29-5727dbc3fbf1",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "control_flow_conditionals",
+        "equality",
+        "strings"
+      ]
+    },
+    {
+      "slug": "rna-transcription",
+      "uuid": "99147c39-e8d3-4166-9215-c47fb4832781",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "strings",
+        "transforming"
+      ]
+    },
+    {
+      "slug": "anagram",
+      "uuid": "6e811b53-4eb1-40f9-a811-b5113d68ae8a",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "equality",
+        "strings"
+      ]
+    }
+  ]
+}
