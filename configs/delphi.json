@@ -674,6 +674,14 @@
       ]
     },
     {
+      "slug": "nth-prime",
+      "uuid": "600aebda-c600-46a1-9e35-8d89342ab7ef",
+      "core": false,
+      "unlocked_by": "book-store",
+      "difficulty": 6,
+      "topics": ["math"]
+    },
+    {
       "slug": "pig-latin",
       "uuid": "67bd22f2-b707-48c7-b0a1-a0413e543959",
       "core": false,
@@ -734,6 +742,14 @@
       "unlocked_by": "saddle-points",
       "difficulty": 4,
       "topics": ["algorithms", "strings", "loops", "arrays"]
+    },
+    {
+      "slug": "say",
+      "uuid": "1924b22a-6bab-4e15-9ed3-e7add2a596d7",
+      "core": false,
+      "unlocked_by": "kindergarten-garden",
+      "difficulty": 5,
+      "topics": ["strings", "transforming"]
     },
     {
       "slug": "poker",
