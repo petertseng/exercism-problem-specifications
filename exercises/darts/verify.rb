@@ -9,10 +9,23 @@ CIRCLES = [
   {radius: 10, score: 1},
 ].map(&:freeze).freeze
 
-verify(json['cases'], property: 'score') { |i, _|
-  dist2 = i[?x] ** 2 + i[?y] ** 2
+find_circles = [
+  ['correct', ->(_, _, d2) { CIRCLES.find { |c| d2 <= c[:radius] ** 2 } }],
+  ['equal not inside', ->(_, _, d2) { CIRCLES.find { |c| d2 < c[:radius] ** 2 } }],
+  ['rev', ->(_, _, d2) { CIRCLES.reverse.find { |c| d2 <= c[:radius] ** 2 } }],
+  ['x only', ->(x, _, _) { CIRCLES.find { |c| 2 * x ** 2 <= c[:radius] ** 2 } }],
+  ['y only', ->(_, y, _) { CIRCLES.find { |c| 2 * y ** 2 <= c[:radius] ** 2 } }],
+  ['abs', ->(x, y, _) { CIRCLES.find { |c| x.abs + y.abs <= c[:radius] } }],
+  ['squares', ->(x, y, _) { CIRCLES.find { |c| x <= c[:radius] && y <= c[:radius] } }],
+]
 
-  relevant_circle = CIRCLES.find { |c| dist2 <= c[:radius] ** 2 }
-
-  relevant_circle&.[](:score) || 0
-}
+multi_verify(json['cases'], property: 'score', implementations: find_circles.map { |name, fc|
+  {
+    name: name,
+    should_fail: name != 'correct',
+    f: ->(i, _) {
+      relevant_circle = fc[x = i[?x], y = i[?y], x ** 2 + y ** 2]
+      relevant_circle&.[](:score) || 0
+    }
+  }
+})
