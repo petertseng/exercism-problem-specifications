@@ -119,6 +119,17 @@
       ]
     },
     {
+      "slug": "darts",
+      "uuid": "72c8d390-4f07-4ec2-8e5a-4f57cf04e29c",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 1,
+      "topics": [
+        "control_flow_conditionals",
+        "math"
+      ]
+    },
+    {
       "slug": "secret-handshake",
       "uuid": "580309f9-65f1-480b-bdb6-c14846963c33",
       "core": false,
@@ -127,6 +138,28 @@
       "topics": [
         "control_flow_conditionals",
         "pattern_matching",
+        "strings"
+      ]
+    },
+    {
+      "slug": "queen-attack",
+      "uuid": "7fd5455c-46d2-4484-9c7d-04fa6ef305f4",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 1,
+      "topics": [
+        "control_flow_conditionals",
+        "logic"
+      ]
+    },
+    {
+      "slug": "diamond",
+      "uuid": "fa949101-5771-477c-9221-0112dcbbdcde",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 2,
+      "topics": [
+        "lists",
         "strings"
       ]
     },
@@ -196,6 +229,16 @@
       "difficulty": 2,
       "topics": [
         "control_flow_conditionals"
+      ]
+    },
+    {
+      "slug": "prime-factors",
+      "uuid": "b6ff9201-e0fc-43e5-9501-cd0509f9ce1c",
+      "core": false,
+      "unlocked_by": "leap",
+      "difficulty": 3,
+      "topics": [
+        "math"
       ]
     },
     {
@@ -358,6 +401,17 @@
       ]
     },
     {
+      "slug": "sublist",
+      "uuid": "2f974a71-a432-410b-a432-1e44950ad018",
+      "core": false,
+      "unlocked_by": "bob",
+      "difficulty": 4,
+      "topics": [
+        "lists",
+        "sequences"
+      ]
+    },
+    {
       "slug": "word-count",
       "uuid": "43df8921-f0c3-4a0c-9bdf-eb89405049ad",
       "core": false,
@@ -389,6 +443,17 @@
       "topics": [
         "algorithms",
         "bitwise_operations"
+      ]
+    },
+    {
+      "slug": "transpose",
+      "uuid": "9af2325d-0450-45a3-a0da-8a18fafa0b7f",
+      "core": false,
+      "unlocked_by": "hamming",
+      "difficulty": 4,
+      "topics": [
+        "algorithms",
+        "transforming"
       ]
     },
     {
@@ -463,6 +528,16 @@
       "topics": [
         "math",
         "strings"
+      ]
+    },
+    {
+      "slug": "rational-numbers",
+      "uuid": "8b379d6e-196f-4ccc-808d-91fb6255e474",
+      "core": false,
+      "unlocked_by": "leap",
+      "difficulty": 5,
+      "topics": [
+        "math"
       ]
     },
     {
@@ -619,6 +694,18 @@
       "difficulty": 6,
       "topics": [
         "algorithms",
+        "strings"
+      ]
+    },
+    {
+      "slug": "forth",
+      "uuid": "95335b21-a840-45f3-8d65-d7de7aec228a",
+      "core": false,
+      "unlocked_by": "collatz-conjecture",
+      "difficulty": 6,
+      "topics": [
+        "algorithms",
+        "parsing",
         "strings"
       ]
     },

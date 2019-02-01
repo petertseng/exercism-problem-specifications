@@ -211,6 +211,44 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": []
+    },
+    {
+      "slug": "armstrong-numbers",
+      "uuid": "f2fb1233-33bf-44fd-977a-f56731f6509c",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "algorithms",
+        "loops",
+        "math"
+      ]
+    },
+    {
+      "slug": "isogram",
+      "uuid": "bba4f22b-1afc-46a5-bb99-046f7f4bee8c",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "algorithms",
+        "conditionals",
+        "loops",
+        "maps",
+        "strings"
+      ]
+    },
+    {
+      "slug": "two-fer",
+      "uuid": "17e14d66-6896-42f2-8237-250166f0d774",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "conditionals",
+        "optional_values",
+        "text_formatting"
+      ]
     }
   ]
 }
