@@ -1,5 +1,6 @@
 # can use list-tracks to update this.
 TRACKS = %w(
+ada
 ballerina
 bash
 c
@@ -55,11 +56,14 @@ ruby
 rust
 scala
 scheme
+shen
 sml
 swift
+tcl
 typescript
 vbnet
 vimscript
+x86-assembly
 )
 
 `mkdir -p configs`
