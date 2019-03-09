@@ -173,6 +173,17 @@
       ]
     },
     {
+      "slug": "grains",
+      "uuid": "40dcc736-1904-418e-bb69-2186b3bb0a83",
+      "core": false,
+      "unlocked_by": "sum-of-multiples",
+      "difficulty": 2,
+      "topics": [
+        "integers",
+        "type_conversion"
+      ]
+    },
+    {
       "slug": "difference-of-squares",
       "uuid": "aaeadc9c-d92d-4d5a-a601-e7836f59dd9f",
       "core": false,
@@ -360,8 +371,8 @@
       ]
     },
     {
-      "slug": "binary",
-      "uuid": "3acf148d-df9e-4897-8c9f-c17a3ba5e4b6",
+      "slug": "all-your-base",
+      "uuid": "c95b43a3-f702-473e-bdd5-aa6708ba1ce3",
       "core": false,
       "unlocked_by": null,
       "difficulty": 1,
@@ -396,6 +407,43 @@
         "events",
         "reactive_programming"
       ]
+    },
+    {
+      "slug": "darts",
+      "uuid": "c83824af-bac6-4e59-9bf0-df5ab3f83a3d",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "conditionals",
+        "floating_point_numbers",
+        "math"
+      ]
+    },
+    {
+      "slug": "secret-handshake",
+      "uuid": "09623b3d-05ee-4825-aae8-6434c9538366",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "bitwise_operations",
+        "conditionals",
+        "integers",
+        "lists",
+        "logic",
+        "loops",
+        "transforming"
+      ]
+    },
+    {
+      "slug": "binary",
+      "uuid": "3acf148d-df9e-4897-8c9f-c17a3ba5e4b6",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 0,
+      "topics": null,
+      "deprecated": true
     }
   ]
 }
