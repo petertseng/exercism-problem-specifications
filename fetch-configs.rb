@@ -40,7 +40,7 @@ objective-c
 ocaml
 perl5
 perl6
-pharo
+pharo-smalltalk
 php
 plsql
 pony
