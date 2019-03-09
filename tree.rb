@@ -1,6 +1,7 @@
 require 'json'
 
 flat = ARGV.delete('--flat')
+difficulty = ARGV.delete('-d')
 r = JSON.parse(ARGV.empty? ? File.read('config.json') : ARGF.read)
 
 cores = []
@@ -20,19 +21,23 @@ r['exercises'].each { |x|
   end
 }
 
-exercises_unlocked_by[nil].each { |x| puts "[free] #{x}" }
+fmt_exercise = r['exercises'].map { |e|
+  [e['slug'].freeze, "#{e['slug']}#{" #{e['difficulty']}" if difficulty}"]
+}.to_h.freeze
+
+exercises_unlocked_by[nil].each { |x| puts "[free] #{fmt_exercise[x]}" }
 
 if flat
   puts '[core]'
-  cores.each { |core| puts core }
+  cores.each { |core| puts fmt_exercise[core] }
   puts
   puts '[side]'
   prerequisite.sort_by(&:first).each { |k, v|
-    puts "#{k} unlocked by #{v}"
+    puts "#{fmt_exercise[k]} unlocked by #{fmt_exercise[v]}"
   }
 else
   cores.each { |core|
-    puts core
-    exercises_unlocked_by[core].each { |u| puts "    #{u}" }
+    puts fmt_exercise[core]
+    exercises_unlocked_by[core].each { |u| puts "    #{fmt_exercise[u]}" }
   }
 end
