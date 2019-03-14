@@ -58,6 +58,18 @@
       ]
     },
     {
+      "slug": "isogram",
+      "uuid": "3c1b70fa-aaa8-4323-9aab-4c76da0a89e1",
+      "core": false,
+      "unlocked_by": "armstrong-numbers",
+      "difficulty": 1,
+      "topics": [
+        "algorithms",
+        "logic",
+        "strings"
+      ]
+    },
+    {
       "slug": "difference-of-squares",
       "uuid": "c1cdab6f-c18c-4173-828a-2191151d20d4",
       "core": true,
@@ -215,6 +227,20 @@
       "topics": [
         "pattern_matching",
         "stacks"
+      ]
+    },
+    {
+      "slug": "pascals-triangle",
+      "uuid": "f06d9bb0-0b8d-4b34-b6d4-5c5cfae0d93c",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops",
+        "integers",
+        "lists",
+        "math"
       ]
     }
   ]

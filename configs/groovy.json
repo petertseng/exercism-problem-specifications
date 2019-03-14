@@ -168,6 +168,21 @@
       ]
     },
     {
+      "slug": "allergies",
+      "uuid": "715c9d2e-9a31-42e8-ba51-fd34419ece16",
+      "core": false,
+      "unlocked_by": "gigasecond",
+      "difficulty": 5,
+      "topics": [
+        "booleans",
+        "conditionals",
+        "enumerations",
+        "integers",
+        "lists",
+        "loops"
+      ]
+    },
+    {
       "slug": "scrabble-score",
       "uuid": "df2eaff0-bcf2-47ab-bb56-dd4f84cc4a63",
       "core": true,
@@ -234,6 +249,20 @@
         "booleans",
         "classes",
         "exception_handling"
+      ]
+    },
+    {
+      "slug": "collatz-conjecture",
+      "uuid": "8eb3cc18-19bb-40a0-aada-5cf8b9aab1c8",
+      "core": false,
+      "unlocked_by": "triangle",
+      "difficulty": 4,
+      "topics": [
+        "conditionals",
+        "exception_handling",
+        "integers",
+        "math",
+        "recursion"
       ]
     },
     {
