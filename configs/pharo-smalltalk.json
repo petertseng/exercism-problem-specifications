@@ -69,6 +69,32 @@
 			]
 		},
 		{
+			"slug" : "grains",
+			"uuid" : "93dde1bb-8040-0d00-812a-052301deb008",
+			"core" : true,
+			"auto_approve" : false,
+			"unlocked_by" : null,
+			"difficulty" : 2,
+			"topics" : [
+				"math",
+				"recursion"
+			]
+		},
+		{
+			"slug" : "grade-school",
+			"uuid" : "8198e8bb-8040-0d00-812f-dfab01deb008",
+			"core" : true,
+			"auto_approve" : false,
+			"unlocked_by" : null,
+			"difficulty" : 4,
+			"topics" : [
+				"sorting",
+				"filtering",
+				"lists",
+				"object_oriented_programming"
+			]
+		},
+		{
 			"slug" : "acronym",
 			"uuid" : "dc7b1fff-f0be-460d-b146-ee84c2acc10b",
 			"core" : false,
@@ -91,6 +117,19 @@
 			"topics" : [
 				"strings",
 				"filtering"
+			]
+		},
+		{
+			"slug" : "binary",
+			"uuid" : "a90be8bb-8040-0d00-812e-0c1701deb008",
+			"core" : false,
+			"auto_approve" : false,
+			"unlocked_by" : "isogram",
+			"difficulty" : 3,
+			"topics" : [
+				"strings",
+				"iteration",
+				"math"
 			]
 		},
 		{
@@ -130,6 +169,32 @@
 				"strings",
 				"conditionals",
 				"logic"
+			]
+		},
+		{
+			"slug" : "roman-numerals",
+			"uuid" : "973e4910-7940-0d00-bbad-09db01dff3c9",
+			"core" : false,
+			"auto_approve" : false,
+			"unlocked_by" : "reverse-string",
+			"difficulty" : 1,
+			"topics" : [
+				"iteration",
+				"maps",
+				"transforming"
+			]
+		},
+		{
+			"slug" : "sieve",
+			"uuid" : "ffe8dcbb-8040-0d00-8124-bf5801deb008",
+			"core" : false,
+			"auto_approve" : false,
+			"unlocked_by" : "isogram",
+			"difficulty" : 3,
+			"topics" : [
+				"math",
+				"lists",
+				"loops"
 			]
 		},
 		{
