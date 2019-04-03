@@ -10,10 +10,20 @@ json = JSON.parse(File.read(File.join(__dir__, 'canonical-data.json')))
 
 raise "Have #{json['cases'].size} cases, but expected #{ALLERGENS.size + 1}" if json['cases'].size != ALLERGENS.size + 1
 
-json['cases'][0..-2].each { |c, _|
-  verify(c['cases'], property: 'allergicTo') { |i, _|
-    i['score'] & ALLERGENS[i['item']] != 0
-  }
+json['cases'][0..-2].zip(ALLERGENS.keys) { |c, allergen|
+  multi_verify(c['cases'], property: 'allergicTo', implementations: {
+    correct: ALLERGENS,
+    always_false: ALLERGENS.merge(allergen => 0),
+    always_true: ALLERGENS.merge(allergen => ~0),
+  }.map { |name, allergens|
+    {
+      name: name,
+      should_fail: name != :correct,
+      f: ->(i, _) {
+        i['score'] & allergens[i['item']] != 0
+      },
+    }
+  })
 }
 
 verify(json['cases'][-1]['cases'], property: 'list') { |i, _|
