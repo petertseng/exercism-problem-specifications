@@ -1,9 +1,8 @@
 {
   "language": "Groovy",
-  "active": false,
+  "active": true,
   "blurb": "Groovy is an unopinionated, multi-paradigm language that enhances Java with the intent to make your code less verbose, yet still allows you utilize the power of the JVM.",
-  "checklist_issue": 9,
-  "test_pattern": "(Spec)[.]groovy",
+  "solution_pattern": "reference",
   "exercises": [
     {
       "slug": "hello-world",
@@ -130,6 +129,22 @@
       ]
     },
     {
+      "slug": "nucleotide-count",
+      "uuid": "75f33038-85c5-4d55-a59a-dcb0153b181a",
+      "core": false,
+      "unlocked_by": "hamming",
+      "difficulty": 5,
+      "topics": [
+        "conditionals",
+        "exception_handling",
+        "integers",
+        "maps",
+        "parsing",
+        "searching",
+        "strings"
+      ]
+    },
+    {
       "slug": "roman-numerals",
       "uuid": "915c4792-6949-4aef-826a-8fe5dbe2f59c",
       "core": false,
@@ -206,6 +221,34 @@
         "integers",
         "loops",
         "math"
+      ]
+    },
+    {
+      "slug": "sum-of-multiples",
+      "uuid": "5465d5ca-64b7-4d0d-89cc-048a98daee1d",
+      "core": false,
+      "unlocked_by": "difference-of-squares",
+      "difficulty": 4,
+      "topics": [
+        "arrays",
+        "conditionals",
+        "integers",
+        "loops",
+        "math"
+      ]
+    },
+    {
+      "slug": "luhn",
+      "uuid": "a81ac7ce-ed46-4eae-bad4-2089795d269e",
+      "core": false,
+      "unlocked_by": "hamming",
+      "difficulty": 4,
+      "topics": [
+        "algorithms",
+        "booleans",
+        "loops",
+        "strings",
+        "type_conversion"
       ]
     },
     {
@@ -305,6 +348,22 @@
       ]
     },
     {
+      "slug": "saddle-points",
+      "uuid": "fc5cabe4-08b7-4bdf-8fcc-6653fb18924f",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "arrays",
+        "conditionals",
+        "integers",
+        "lists",
+        "loops",
+        "matrices",
+        "sets"
+      ]
+    },
+    {
       "slug": "flatten-array",
       "uuid": "6bc6b3fb-481a-4c4b-b095-d284f64ff48d",
       "core": true,
@@ -329,6 +388,18 @@
         "loops",
         "maps",
         "strings"
+      ]
+    },
+    {
+      "slug": "etl",
+      "uuid": "5a5accf3-8043-4e5a-90e7-8d6cfd09657c",
+      "core": false,
+      "unlocked_by": "word-count",
+      "difficulty": 6,
+      "topics": [
+        "lists",
+        "maps",
+        "transforming"
       ]
     },
     {
@@ -372,7 +443,7 @@
       ]
     },
     {
-      "slug": "double-linked-list",
+      "slug": "linked-list",
       "uuid": "6a5e6d90-e0f3-43e7-8088-a4137bf2b125",
       "core": true,
       "unlocked_by": null,
@@ -391,6 +462,29 @@
       "difficulty": 4,
       "topics": [
         "integers"
+      ]
+    },
+    {
+      "slug": "pangram",
+      "uuid": "60e43a53-372f-450c-afb9-5ae87c3ead35",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "pattern_matching",
+        "regular_expressions",
+        "strings"
+      ]
+    },
+    {
+      "slug": "space-age",
+      "uuid": "071fa3a7-6e7f-496a-8d94-b29ac29422e6",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "conditionals",
+        "floating_point_numbers"
       ]
     }
   ]

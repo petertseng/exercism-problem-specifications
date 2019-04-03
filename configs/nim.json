@@ -492,6 +492,111 @@
       ]
     },
     {
+      "slug": "matrix",
+      "uuid": "273015db-0c65-49f8-b216-50160dbad8b0",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "matrices",
+        "strings"
+      ]
+    },
+    {
+      "slug": "meetup",
+      "uuid": "adfbdcef-4d75-446f-9bfe-d3c7f28d8d2f",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "dates",
+        "enumerations",
+        "transforming"
+      ]
+    },
+    {
+      "slug": "pascals-triangle",
+      "uuid": "9ba153ad-bd49-4c26-9d80-dadb496cb637",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "algorithms",
+        "math"
+      ]
+    },
+    {
+      "slug": "perfect-numbers",
+      "uuid": "92579b80-194a-430f-b0e1-f2854ea8b505",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "enumerations",
+        "filtering",
+        "integers",
+        "math"
+      ]
+    },
+    {
+      "slug": "prime-factors",
+      "uuid": "869c033a-052c-4031-9402-970824bb520a",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "integers",
+        "math"
+      ]
+    },
+    {
+      "slug": "protein-translation",
+      "uuid": "2121a163-8dce-4267-b8de-d1952c1491e8",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "maps",
+        "strings"
+      ]
+    },
+    {
+      "slug": "resistor-color",
+      "uuid": "b239a0f3-47b5-4583-985f-c98efca8259e",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "arrays",
+        "enumerations"
+      ]
+    },
+    {
+      "slug": "rotational-cipher",
+      "uuid": "b60b8bfd-a2a7-4da0-8a22-894fff5abab2",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "cryptography",
+        "integers",
+        "strings"
+      ]
+    },
+    {
+      "slug": "say",
+      "uuid": "ef24428e-289c-48d0-967b-961d95246f3c",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "integers",
+        "strings",
+        "text_formatting",
+        "transforming"
+      ]
+    },
+    {
       "slug": "secret-handshake",
       "uuid": "09623b3d-05ee-4825-aae8-6434c9538366",
       "core": false,
@@ -505,6 +610,54 @@
         "logic",
         "loops",
         "transforming"
+      ]
+    },
+    {
+      "slug": "series",
+      "uuid": "ac78d616-2521-470c-a09f-aaffc96d3795",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "sequences",
+        "strings",
+        "transforming"
+      ]
+    },
+    {
+      "slug": "sieve",
+      "uuid": "538e773f-ac66-4a1f-9b12-3eacd45b5084",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "algorithms",
+        "filtering",
+        "integers",
+        "math"
+      ]
+    },
+    {
+      "slug": "spiral-matrix",
+      "uuid": "32c1262c-4f60-45cf-a5eb-aae7ea19acfc",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "integers",
+        "matrices"
+      ]
+    },
+    {
+      "slug": "sublist",
+      "uuid": "08719e83-36ac-4f9a-9075-6edca3648d5d",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "enumerations",
+        "searching",
+        "sequences"
       ]
     },
     {

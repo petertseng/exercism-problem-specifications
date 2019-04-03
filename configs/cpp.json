@@ -293,6 +293,17 @@
       ]
     },
     {
+      "slug": "pascals-triangle",
+      "uuid": "7ed4434a-3564-4194-b91a-d3baeec9c519",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "arrays",
+        "math"
+       ]
+    },
+    {
       "slug": "crypto-square",
       "uuid": "177ecdf4-f249-4193-b9e1-8f1c6480bfad",
       "core": false,
@@ -369,6 +380,21 @@
         "arrays",
         "logic",
         "strings"
+      ]
+    },
+    {
+      "slug": "robot-simulator",
+      "uuid": "ed2e467d-621d-42de-afdd-f9b49efbc263",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "control_flow_loops",
+        "classes",
+        "conditionals",
+        "strings",
+        "variables",
+        "pairs"
       ]
     },
     {
@@ -480,6 +506,17 @@
         "control_flow_if_else_statements",
         "control_flow_loops",
         "searching"
+      ]
+    },
+    {
+      "slug": "binary-search-tree",
+      "uuid": "3463598a-c622-4138-97d3-0c71cbe718c6",
+      "core": false,
+      "unlocked_by": "gigasecond",
+      "difficulty": 10,
+      "topics":[
+        "algorithms",
+        "classes"
       ]
     },
     {

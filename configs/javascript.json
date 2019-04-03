@@ -19,15 +19,37 @@
       ]
     },
     {
-      "slug": "leap",
-      "uuid": "7c8294ee-5924-4bf8-a72f-31d0e2d7d9a0",
+      "slug": "two-fer",
+      "uuid": "7f49e997-4435-4f34-a020-bddc92c838ed",
       "core": true,
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "booleans",
-        "integers",
-        "logic"
+        "optional_values",
+        "strings",
+        "text_formatting"
+      ]
+    },
+    {
+      "slug": "resistor-color",
+      "uuid": "53be6837-c224-45f1-bff3-d7f74d6285ce",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "arrays",
+        "strings"
+      ]
+    },
+    {
+      "slug": "resistor-colors",
+      "uuid": "de800041-3dcc-41b9-b101-7314ff685c93",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "strings",
+        "arrays"
       ]
     },
     {
@@ -225,24 +247,22 @@
       ]
     },
     {
-      "slug": "two-fer",
-      "uuid": "7f49e997-4435-4f34-a020-bddc92c838ed",
+      "slug": "leap",
+      "uuid": "7c8294ee-5924-4bf8-a72f-31d0e2d7d9a0",
       "core": false,
-      "unlocked_by": "hello-world",
+      "unlocked_by": "resistor-color",
       "difficulty": 1,
       "topics": [
         "booleans",
-        "logic",
-        "optional_values",
-        "strings",
-        "text_formatting"
+        "integers",
+        "logic"
       ]
     },
     {
       "slug": "reverse-string",
       "uuid": "e84c97eb-dbec-487c-b99f-ae9924e16293",
       "core": false,
-      "unlocked_by": "leap",
+      "unlocked_by": "resistor-color",
       "difficulty": 2,
       "topics": [
         "for",
@@ -254,7 +274,7 @@
       "slug": "triangle",
       "uuid": "ed3ca73a-a0f0-46b8-8013-8b6d20758c8f",
       "core": false,
-      "unlocked_by": "leap",
+      "unlocked_by": "resistor-color",
       "difficulty": 3,
       "topics": [
         "control_flow_conditionals",
@@ -267,7 +287,7 @@
       "slug": "collatz-conjecture",
       "uuid": "b8dacb3a-51d0-4da7-a6d2-aa29867e2b8c",
       "core": false,
-      "unlocked_by": "leap",
+      "unlocked_by": "resistor-color",
       "difficulty": 3,
       "topics": [
         "control_flow_conditionals",
@@ -1308,7 +1328,6 @@
         "math"
       ]
     },
-
     {
       "slug": "trinary",
       "uuid": "1acf1d2d-a25e-4576-94de-0470abc872d9",
