@@ -2,6 +2,7 @@
   "language": "C++",
   "active": true,
   "blurb": "C++ is a general-purpose programming language that supports procedural, object-oriented, generic and functional programming styles. C++ is deployed on billions of devices from the smallest embedded microprocessor to the largest supercomputer.",
+  "test_pattern": ".*_test[.]cpp",
   "foregone": [
     "point-mutations"
   ],
@@ -43,7 +44,7 @@
     {
       "slug": "reverse-string",
       "uuid": "c6946af0-3c2f-4f76-8b30-a1643cd5be63",
-      "core": false,
+      "core": true,
       "unlocked_by": null,
       "difficulty": 2,
       "topics": [
@@ -53,8 +54,8 @@
     {
       "slug": "gigasecond",
       "uuid": "4dbe1bb3-0419-4749-8c2a-ec91539a8640",
-      "core": true,
-      "unlocked_by": null,
+      "core": false,
+      "unlocked_by": "reverse-string",
       "difficulty": 2,
       "topics": [
         "dates",
@@ -181,7 +182,7 @@
       "slug": "robot-name",
       "uuid": "67c3cb10-b893-428a-82d0-79602aef2775",
       "core": false,
-      "unlocked_by": "gigasecond",
+      "unlocked_by": "reverse-string",
       "difficulty": 5,
       "topics": [
         "randomness",
@@ -192,7 +193,7 @@
       "slug": "sum-of-multiples",
       "uuid": "a190ad11-db1c-4624-a477-e1d0c91d8b4f",
       "core": false,
-      "unlocked_by": "gigasecond",
+      "unlocked_by": "reverse-string",
       "difficulty": 3,
       "topics": [
         "math"
@@ -285,7 +286,7 @@
       "slug": "prime-factors",
       "uuid": "ba755932-b301-41cc-b7f2-5e6d2e130325",
       "core": false,
-      "unlocked_by": "gigasecond",
+      "unlocked_by": "reverse-string",
       "difficulty": 5,
       "topics": [
         "control_flow_loops",
@@ -301,7 +302,7 @@
       "topics": [
         "arrays",
         "math"
-       ]
+      ]
     },
     {
       "slug": "crypto-square",
@@ -389,12 +390,12 @@
       "unlocked_by": null,
       "difficulty": 4,
       "topics": [
-        "control_flow_loops",
         "classes",
         "conditionals",
+        "control_flow_loops",
+        "pairs",
         "strings",
-        "variables",
-        "pairs"
+        "variables"
       ]
     },
     {
@@ -455,7 +456,7 @@
       "slug": "allergies",
       "uuid": "80ae6a8e-8464-4f3a-afed-14d424757413",
       "core": false,
-      "unlocked_by": "gigasecond",
+      "unlocked_by": "reverse-string",
       "difficulty": 3,
       "topics": [
         "bitwise_operations",
@@ -495,7 +496,7 @@
         "strings"
       ]
     },
-    { 
+    {
       "slug": "binary-search",
       "uuid": "abdd7aa3-25f6-4d27-a4dc-6bd1ea2f718c",
       "core": false,
@@ -512,9 +513,9 @@
       "slug": "binary-search-tree",
       "uuid": "3463598a-c622-4138-97d3-0c71cbe718c6",
       "core": false,
-      "unlocked_by": "gigasecond",
+      "unlocked_by": "pangram",
       "difficulty": 10,
-      "topics":[
+      "topics": [
         "algorithms",
         "classes"
       ]
@@ -531,7 +532,17 @@
         "loops",
         "mathematics"
       ]
+    },
+    {
+      "slug": "luhn",
+      "uuid": "885865bc-a197-436f-94bc-b1998d5cc081",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "math",
+        "strings"
+      ]
     }
   ]
 }
-

@@ -333,7 +333,7 @@
       ]
     },
     {
-      "slug": "bracket-push",
+      "slug": "matching-brackets",
       "uuid": "bb8af717-9e8d-498c-85cf-e6e77a84919e",
       "core": false,
       "unlocked_by": "bob",
@@ -409,6 +409,31 @@
       ]
     },
     {
+      "slug": "clock",
+      "uuid": "f1ebb810-ec96-4415-ae97-c76a0a714267",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "equality",
+        "text_formatting",
+        "time"
+      ]
+    },
+    {
+      "slug": "crypto-square",
+      "uuid": "a6e88c81-4f8b-45bb-8656-74f5a9554a12",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "cryptography",
+        "strings",
+        "text_formatting",
+        "transforming"
+      ]
+    },
+    {
       "slug": "darts",
       "uuid": "c83824af-bac6-4e59-9bf0-df5ab3f83a3d",
       "core": false,
@@ -418,6 +443,31 @@
         "conditionals",
         "floating_point_numbers",
         "math"
+      ]
+    },
+    {
+      "slug": "diamond",
+      "uuid": "675520e4-b763-4bdb-8d6a-740b12834fcb",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "strings",
+        "text_formatting"
+      ]
+    },
+    {
+      "slug": "diffie-hellman",
+      "uuid": "bf9a2fc3-def5-4bfc-a944-91bb213ad8b5",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "algorithms",
+        "cryptography",
+        "integers",
+        "math",
+        "randomness"
       ]
     },
     {
@@ -536,6 +586,18 @@
         "filtering",
         "integers",
         "math"
+      ]
+    },
+    {
+      "slug": "phone-number",
+      "uuid": "7cb027d9-6841-443a-9168-fb1347abe891",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "conditionals",
+        "parsing",
+        "strings"
       ]
     },
     {

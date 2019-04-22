@@ -98,7 +98,7 @@
       ]
     },
     {
-      "slug": "bracket-push",
+      "slug": "matching-brackets",
       "uuid": "b8a4ccaa-4676-4921-baad-ec194a429b75",
       "core": false,
       "unlocked_by": null,
@@ -364,6 +364,124 @@
         "arrays",
         "filtering",
         "loops"
+      ]
+    },
+    {
+      "slug": "all-your-base",
+      "uuid": "c8dd3c53-e4fc-434e-9e4e-3def1361cf58",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "integers",
+        "math",
+        "transforming"
+      ]
+    },
+    {
+      "slug": "luhn",
+      "uuid": "57594931-5c91-4c1b-b5c5-04ea354c581e",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "algorithms",
+        "integers",
+        "strings"
+      ]
+    },
+    {
+      "slug": "secret-handshake",
+      "uuid": "e8aef4e8-fe80-44da-a1fe-d9a29f0f1683",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 5,
+      "topics": [
+        "arrays",
+        "bitwise_operations",
+        "integers"
+      ]
+    },
+    {
+      "slug": "sum-of-multiples",
+      "uuid": "5241b5ce-7360-40f2-8266-6a8934dc1d30",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 5,
+      "topics": [
+        "integers",
+        "loops",
+        "math"
+      ]
+    },
+    {
+      "slug": "darts",
+      "uuid": "7f0175f4-d72d-4e59-be1e-e430279c6b79",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+          "conditionals",
+          "math"
+      ]
+    },
+    {
+      "slug": "resistor-color-duo",
+      "uuid": "4bff3abc-c385-4549-84ef-c138720c444d",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "arrays",
+        "strings"
+      ]
+    },
+    {
+      "slug": "proverb",
+      "uuid": "3cef1164-8eab-4e2d-a455-2e0630919bd1",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "arrays",
+        "loops",
+        "strings"
+      ]
+    },
+    {
+      "slug": "series",
+      "uuid": "c725506e-2949-466d-9da9-cf0db74fb978",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "arrays",
+        "loops",
+        "enumerable"
+      ]
+    },
+    {
+      "slug": "meetup",
+      "uuid": "46ae63dc-7d6f-4eb3-9d6e-c6e83b28fcfa",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "dates",
+        "time",
+        "transforming",
+        "type_conversion"
+      ]
+    },
+    {
+      "slug": "allergies",
+      "uuid": "b306bdaa-438e-46a2-ba54-82cb2c0be882",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "bitwise_operations",
+        "enumeration"
       ]
     }
   ]
