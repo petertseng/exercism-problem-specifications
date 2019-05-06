@@ -107,6 +107,18 @@
       ]
     },
     {
+      "slug" : "forth",
+      "uuid" : "98e35398-a743-0d00-aeac-1c4207045670",
+      "core" : true,
+      "auto_approve" : false,
+      "unlocked_by" : null,
+      "difficulty" : 6,
+      "topics" : [
+        "parsing",
+        "stacks"
+      ]
+    },
+    {
       "slug" : "acronym",
       "uuid" : "dc7b1fff-f0be-460d-b146-ee84c2acc10b",
       "core" : false,
@@ -129,6 +141,18 @@
       "topics" : [
         "strings",
         "filtering"
+      ]
+    },
+    {
+      "slug" : "armstrong-numbers",
+      "uuid" : "15f1a716-9d41-0d00-8fc9-66a908866539",
+      "core" : false,
+      "auto_approve" : false,
+      "unlocked_by" : "two-fer",
+      "difficulty" : 2,
+      "topics" : [
+        "math",
+        "integers"
       ]
     },
     {
@@ -169,19 +193,6 @@
         "conditionals",
         "object_oriented_programming",
         "algorithms"
-      ]
-    },
-    {
-      "slug" : "bracket-push",
-      "uuid" : "d126be16-9d41-0d00-8fdc-2ff208866539",
-      "core" : false,
-      "auto_approve" : false,
-      "unlocked_by" : "leap",
-      "difficulty" : 4,
-      "topics" : [
-        "strings",
-        "parsing",
-        "stacks"
       ]
     },
     {
@@ -237,6 +248,17 @@
       ]
     },
     {
+      "slug" : "die",
+      "uuid" : "dbea4db3-5044-0d00-ab77-b35a0c226d01",
+      "core" : false,
+      "auto_approve" : false,
+      "unlocked_by" : null,
+      "difficulty" : 1,
+      "topics" : [
+        "math"
+      ]
+    },
+    {
       "slug" : "etl",
       "uuid" : "d6303b3f-0f41-0d00-a5e1-db510c056502",
       "core" : false,
@@ -277,6 +299,19 @@
       ]
     },
     {
+      "slug" : "isbn-verifier",
+      "uuid" : "d166a016-9d41-0d00-8fc3-1ee008866539",
+      "core" : false,
+      "auto_approve" : false,
+      "unlocked_by" : "leap",
+      "difficulty" : 3,
+      "topics" : [
+        "characters",
+        "collections",
+        "validation"
+      ]
+    },
+    {
       "slug" : "luhn",
       "uuid" : "6298e416-9d41-0d00-8ffa-c83508866539",
       "core" : false,
@@ -287,6 +322,19 @@
         "strings",
         "math",
         "algorithms"
+      ]
+    },
+    {
+      "slug" : "matching-brackets",
+      "uuid" : "d126be16-9d41-0d00-8fdc-2ff208866539",
+      "core" : false,
+      "auto_approve" : false,
+      "unlocked_by" : "leap",
+      "difficulty" : 4,
+      "topics" : [
+        "strings",
+        "parsing",
+        "stacks"
       ]
     },
     {
@@ -363,6 +411,18 @@
         "iteration",
         "maps",
         "transforming"
+      ]
+    },
+    {
+      "slug" : "secret-handshake",
+      "uuid" : "2020ac16-9d41-0d00-8fcd-fe0908866539",
+      "core" : false,
+      "auto_approve" : false,
+      "unlocked_by" : "isogram",
+      "difficulty" : 2,
+      "topics" : [
+        "arrays",
+        "bitwise operations"
       ]
     },
     {

@@ -314,8 +314,8 @@
       "unlocked_by": null,
       "difficulty": 4,
       "topics": [
-        "math",
-        "integers"
+        "integers",
+        "math"
       ]
     },
     {
@@ -421,8 +421,8 @@
       "unlocked_by": null,
       "difficulty": 2,
       "topics": [
-          "conditionals",
-          "math"
+        "conditionals",
+        "math"
       ]
     },
     {
@@ -456,8 +456,8 @@
       "difficulty": 3,
       "topics": [
         "arrays",
-        "loops",
-        "enumerable"
+        "enumerable",
+        "loops"
       ]
     },
     {
@@ -482,6 +482,42 @@
       "topics": [
         "bitwise_operations",
         "enumeration"
+      ]
+    },
+    {
+      "slug": "prime-factors",
+      "uuid": "db7b806a-a595-4739-abda-8bf7bf43c3e4",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "algorithms",
+        "integers",
+        "math"
+      ]
+    },
+    {
+      "slug": "protein-translation",
+      "uuid": "00c6f623-2e54-4f90-ae3f-07e493f93c7c",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "filtering",
+        "maps",
+        "sequences"
+      ]
+    },
+    {
+      "slug": "etl",
+      "uuid": "47465da6-5fa7-4d4c-a0cc-9a1cd74f6610",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "loops",
+        "maps",
+        "transforming"
       ]
     }
   ]

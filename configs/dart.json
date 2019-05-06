@@ -251,6 +251,21 @@
       ]
     },
     {
+      "slug": "prime-factors",
+      "uuid": "89bb2ba8-86f2-4660-8739-4141eb9e6cf5",
+      "core": false,
+      "unlocked_by": "anagram",
+      "difficulty": 3,
+      "topics": [
+        "arrays",
+        "conditionals",
+        "integers",
+        "lists",
+        "loops",
+        "math"
+      ]
+    },
+    {
       "slug": "diamond",
       "uuid": "5bbd251d-b2eb-44a1-a9a6-8543afb7511c",
       "core": false,
@@ -263,7 +278,7 @@
       ]
     },
     {
-      "slug": "bracket-push",
+      "slug": "matching-brackets",
       "uuid": "508ebbf1-205e-4992-97d7-2865f06a3b2b",
       "core": false,
       "unlocked_by": null,
@@ -335,6 +350,36 @@
         "integers",
         "loops",
         "strings"
+      ]
+    },
+    {
+      "slug": "collatz-conjecture",
+      "uuid": "8cc3b7a3-6a63-4e3b-b64d-8a07d52d51f8",
+      "core": false,
+      "unlocked_by": "two-fer",
+      "difficulty": 1,
+      "topics": [
+        "exception_handling",
+        "loops",
+        "math"
+      ]
+    },
+    {
+      "slug": "binary-search-tree",
+      "uuid": "597f86bc-6717-4a4c-a2c6-58241ac3d6cb",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 5,
+      "topics": [
+        "algorithms",
+        "classes",
+        "generics",
+        "inheritance",
+        "logic",
+        "object_oriented_programming",
+        "searching",
+        "sorting",
+        "trees"
       ]
     }
   ]
