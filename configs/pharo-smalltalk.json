@@ -93,6 +93,18 @@
       ]
     },
     {
+      "slug" : "matrix",
+      "uuid" : "bea80017-9d41-0d00-900d-a13308866539",
+      "core" : true,
+      "auto_approve" : false,
+      "unlocked_by" : null,
+      "difficulty" : 4,
+      "topics" : [
+        "matrices",
+        "parsing"
+      ]
+    },
+    {
       "slug" : "grade-school",
       "uuid" : "8198e8bb-8040-0d00-812f-dfab01deb008",
       "core" : true,
@@ -272,6 +284,20 @@
       ]
     },
     {
+      "slug" : "flatten-array",
+      "uuid" : "aa15f716-9d41-0d00-9006-3c7208866539",
+      "core" : false,
+      "auto_approve" : false,
+      "unlocked_by" : "reverse-string",
+      "difficulty" : 2,
+      "topics" : [
+        "lists",
+        "iteration",
+        "recursion",
+        "transforming"
+      ]
+    },
+    {
       "slug" : "hamming",
       "uuid" : "69f615da-2b3f-0d00-a2ed-aca409f0590c",
       "core" : false,
@@ -335,6 +361,19 @@
         "strings",
         "parsing",
         "stacks"
+      ]
+    },
+    {
+      "slug" : "minesweeper",
+      "uuid" : "1318c616-9d41-0d00-8fe3-676108866539",
+      "core" : false,
+      "auto_approve" : false,
+      "unlocked_by" : "allergies",
+      "difficulty" : 5,
+      "topics" : [
+        "parsing",
+        "iteration",
+        "transforming"
       ]
     },
     {

@@ -553,7 +553,7 @@
       ]
     },
     {
-      "slug": "bracket-push",
+      "slug": "matching-brackets",
       "uuid": "6c2499f7-d42c-4d0f-9680-f5f7650023ff",
       "core": false,
       "unlocked_by": "tree-building",
@@ -1334,6 +1334,17 @@
         "lists",
         "recursion",
         "type_conversion"
+      ]
+    },
+    {
+      "slug": "darts",
+      "uuid": "ea1f15aa-43b8-416e-9add-bf3852f6a158",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "conditionals",
+        "math"
       ]
     },
     {

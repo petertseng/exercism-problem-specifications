@@ -475,7 +475,7 @@
       ]
     },
     {
-      "slug": "bracket-push",
+      "slug": "matching-brackets",
       "uuid": "4a517292-3472-40f2-b4b8-5c8c25219ea5",
       "core": false,
       "unlocked_by": "pangram",
@@ -542,6 +542,41 @@
       "topics": [
         "math",
         "strings"
+      ]
+    },
+    {
+      "slug": "armstrong-numbers",
+      "uuid": "1035aa3f-030a-425b-84f1-1967f344d155",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "algorithm",
+        "loops",
+        "math"
+      ]
+    },
+    {
+      "slug": "circular-buffer",
+      "uuid": "92788dbc-feb2-43a6-99c0-af21ce318b01",
+      "core": false,
+      "unlocked_by": "raindrops",
+      "difficulty": 6,
+      "topics": [
+        "algorithm",
+        "classes",
+        "data_structure"
+      ]
+    },
+    {
+      "slug": "collatz-conjecture",
+      "uuid": "c74f60b3-48fe-46c5-ae52-5e4b0787ba84",
+      "core": false,
+      "unlocked_by": "leap",
+      "difficulty": 2,
+      "topics": [
+        "functions",
+        "math"
       ]
     }
   ]

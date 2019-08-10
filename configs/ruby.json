@@ -28,6 +28,17 @@
       ]
     },
     {
+      "slug": "resistor-color-duo",
+      "uuid": "57b0c57e-26a5-4ccf-aaf2-2fefddd918c1",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "array",
+        "loops"
+      ]
+    },
+    {
       "slug": "acronym",
       "uuid": "74468206-68a2-4efb-8caa-782634674c7f",
       "core": true,
@@ -47,6 +58,16 @@
       "difficulty": 2,
       "topics": [
         "arrays"
+      ]
+    },
+    {
+      "slug": "armstrong-numbers",
+      "uuid": "77c5c7e6-265a-4f1a-9bc4-851f8f825420",
+      "core": false,
+      "unlocked_by": "series",
+      "difficulty": 3,
+      "topics": [
+        "math"
       ]
     },
     {
@@ -71,8 +92,8 @@
       "difficulty": 3,
       "topics": [
         "arrays",
-        "loops",
-        "enumerable"
+        "enumerable",
+        "loops"
       ]
     },
     {
@@ -82,9 +103,9 @@
       "unlocked_by": null,
       "difficulty": 3,
       "topics": [
+        "enumerable",
         "hash",
-        "loops",
-        "enumerable"
+        "loops"
       ]
     },
     {
@@ -118,9 +139,9 @@
       "unlocked_by": null,
       "difficulty": 2,
       "topics": [
+        "regular_expressions",
         "sequences",
-        "strings", 
-        "regular_expressions"
+        "strings"
       ]
     },
     {
@@ -221,16 +242,6 @@
         "math"
       ]
     },
-    { "slug": "resistor-color-duo",
-      "uuid": "57b0c57e-26a5-4ccf-aaf2-2fefddd918c1",
-      "core": false,
-      "unlocked_by": null,
-      "difficulty": 2,
-      "topics": [
-        "array",
-        "loops"
-      ]
-    },
     {
       "slug": "rna-transcription",
       "uuid": "41f66d2a-1883-4a2c-875f-663c46fa88aa",
@@ -241,7 +252,7 @@
         "maps",
         "transforming"
       ]
-    }, 
+    },
     {
       "slug": "robot-name",
       "uuid": "76a0fd0a-cc65-4be3-acc8-7348bb67ad5a",
@@ -304,7 +315,7 @@
       "slug": "leap",
       "uuid": "06eaa2dd-dc80-4d38-b10d-11174183b0b6",
       "core": false,
-      "unlocked_by": "two-fer",
+      "unlocked_by": "resistor-color-duo",
       "difficulty": 1,
       "topics": [
         "booleans",
@@ -420,8 +431,8 @@
       "slug": "etl",
       "uuid": "0d66f3db-69a4-44b9-80be-9366f8b189ec",
       "core": false,
-      "unlocked_by": "scrabble-score",
-      "difficulty": 1,
+      "unlocked_by": "word-count",
+      "difficulty": 4,
       "topics": [
         "loops",
         "maps",
@@ -558,8 +569,8 @@
       "slug": "flatten-array",
       "uuid": "2df8ed82-2a04-4112-a17b-7813bcdc0e84",
       "core": false,
-      "unlocked_by": "hello-world",
-      "difficulty": 1,
+      "unlocked_by": "series",
+      "difficulty": 3,
       "topics": [
         "arrays",
         "recursion"
@@ -625,7 +636,7 @@
       ]
     },
     {
-      "slug": "bracket-push",
+      "slug": "matching-brackets",
       "uuid": "26f6e297-7980-4472-8ce7-157b62b0ff40",
       "core": false,
       "unlocked_by": "raindrops",
@@ -1171,6 +1182,31 @@
       "difficulty": 7,
       "topics": [
         "data_structures"
+      ]
+    },
+    {
+      "slug": "grep",
+      "uuid": "99485900-5d16-4848-af1c-2f1a62ad35ab",
+      "core": false,
+      "unlocked_by": "twelve-days",
+      "difficulty": 8,
+      "topics": [
+        "files",
+        "parsing",
+        "pattern_matching",
+        "regular_expressions",
+        "strings",
+        "text_formatting"
+      ]
+    },
+    {
+      "slug": "resistor-color",
+      "uuid": "685634dd-0b38-40bc-b0ad-e8aa2904035f",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 1,
+      "topics": [
+        "arrays"
       ]
     }
   ]

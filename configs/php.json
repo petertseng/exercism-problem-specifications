@@ -341,7 +341,7 @@
       ]
     },
     {
-      "slug": "bracket-push",
+      "slug": "matching-brackets",
       "uuid": "15ea518d-6c35-442a-9150-86da2d865703",
       "core": false,
       "unlocked_by": null,
@@ -702,6 +702,17 @@
       "difficulty": 1,
       "topics": [
         "strings"
+      ]
+    },
+    {
+      "slug": "armstrong-numbers",
+      "uuid": "9e7be7f8-ea50-4245-bde3-2207f0bcebdd",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "algorithms",
+        "math"
       ]
     }
   ]

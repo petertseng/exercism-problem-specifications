@@ -657,6 +657,17 @@
       ]
     },
     {
+      "slug": "robot-name",
+      "uuid": "5d2fa542-245a-4c5b-bfe1-bd667091c556",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "randomness",
+        "strings"
+      ]
+    },
+    {
       "slug": "rotational-cipher",
       "uuid": "b60b8bfd-a2a7-4da0-8a22-894fff5abab2",
       "core": false,
@@ -666,6 +677,18 @@
         "cryptography",
         "integers",
         "strings"
+      ]
+    },
+    {
+      "slug": "saddle-points",
+      "uuid": "8809c138-3973-479e-9331-82a7f719f5cb",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "integers",
+        "matrices",
+        "searching"
       ]
     },
     {
@@ -679,6 +702,17 @@
         "strings",
         "text_formatting",
         "transforming"
+      ]
+    },
+    {
+      "slug": "scale-generator",
+      "uuid": "b81e2ff7-5d11-499d-acc5-0448d1b1af47",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "pattern_matching",
+        "strings"
       ]
     },
     {
@@ -743,6 +777,30 @@
         "enumerations",
         "searching",
         "sequences"
+      ]
+    },
+    {
+      "slug": "twelve-days",
+      "uuid": "b38a3fcc-f5cf-4366-b0b4-e39b8c81e3f6",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "pattern_recognition",
+        "strings",
+        "text_formatting"
+      ]
+    },
+    {
+      "slug": "yacht",
+      "uuid": "9908f5fe-5df7-4e88-aab7-25959ed67985",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "conditionals",
+        "games",
+        "integers"
       ]
     },
     {

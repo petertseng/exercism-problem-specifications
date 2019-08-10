@@ -444,6 +444,19 @@
       ]
     },
     {
+      "slug": "run-length-encoding",
+      "uuid": "87d17b76-4cd0-4e15-9f1a-a51907603b6d",
+      "core": false,
+      "unlocked_by": "rotational-cipher",
+      "difficulty": 5,
+      "topics": [
+        "integers",
+        "pattern_matching",
+        "strings",
+        "transforming"
+      ]
+    },
+    {
       "slug": "saddle-points",
       "uuid": "fc5cabe4-08b7-4bdf-8fcc-6653fb18924f",
       "core": true,
@@ -457,6 +470,21 @@
         "loops",
         "matrices",
         "sets"
+      ]
+    },
+    {
+      "slug": "all-your-base",
+      "uuid": "d1dbcb6f-1cfc-4199-b993-b1a415da1912",
+      "core": false,
+      "unlocked_by": "saddle-points",
+      "difficulty": 6,
+      "topics": [
+        "arrays",
+        "conditionals",
+        "exception_handling",
+        "integers",
+        "loops",
+        "math"
       ]
     },
     {
@@ -628,6 +656,16 @@
       "difficulty": 4,
       "topics": [
         "integers"
+      ]
+    },
+    {
+      "slug": "high-scores",
+      "uuid": "22cfebed-c2aa-4e7c-b467-791b0bba349a",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "lists"
       ]
     }
   ]

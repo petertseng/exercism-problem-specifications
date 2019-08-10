@@ -341,6 +341,22 @@
       ]
     },
     {
+      "slug": "minesweeper",
+      "uuid": "2c60339e-d15a-41e7-ba4f-33fa18d2a732",
+      "core": false,
+      "unlocked_by": "pascals-triangle",
+      "difficulty": 5,
+      "topics": [
+        "classes",
+        "games",
+        "lists",
+        "logic",
+        "loops",
+        "math",
+        "object_oriented_programming"
+      ]
+    },
+    {
       "slug": "isbn-verifier",
       "uuid": "c52dfe2b-5634-4c0c-8ea2-3ca86e5d9a33",
       "core": true,
@@ -380,6 +396,54 @@
         "searching",
         "sorting",
         "trees"
+      ]
+    },
+    {
+      "slug": "nth-prime",
+      "uuid": "b470633d-6d2c-4245-92eb-37ea80500f2b",
+      "core": false,
+      "unlocked_by": "armstrong-numbers",
+      "difficulty": 3,
+      "topics": [
+        "algorithms",
+        "integers",
+        "math"
+      ]
+    },
+    {
+      "slug": "allergies",
+      "uuid": "729f4c8b-678a-434c-a09e-a71aca4bb2c0",
+      "core": false,
+      "unlocked_by": "difference-of-squares",
+      "difficulty": 2,
+      "topics": [
+        "arrays",
+        "bitwise_operations",
+        "control_flow_conditionals",
+        "control_flow_loops"
+      ]
+    },
+    {
+      "slug": "triangle",
+      "uuid": "387eb271-b02d-444f-a1e0-dbccea72f740",
+      "core": false,
+      "unlocked_by": "hamming",
+      "difficulty": 3,
+      "topics": [
+        "control_flow_conditionals",
+        "control_flow_loops"
+      ]
+    },
+    {
+      "slug": "secret-handshake",
+      "uuid": "0687be19-99e8-4b85-b3da-6b91a10acaa3",
+      "core": false,
+      "unlocked_by": "scrabble-score",
+      "difficulty": 5,
+      "topics": [
+        "arrays",
+        "bitwise_operations",
+        "integers"
       ]
     }
   ]
