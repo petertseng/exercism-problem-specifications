@@ -23,6 +23,7 @@ erlang
 factor
 fortran
 fsharp
+gleam
 gnu-apl
 go
 groovy
@@ -59,11 +60,12 @@ scheme
 shen
 sml
 swift
+system-verilog
 tcl
 typescript
 vbnet
 vimscript
-x86-assembly
+x86-64-assembly
 )
 
 `mkdir -p configs`
