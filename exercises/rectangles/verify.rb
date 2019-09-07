@@ -19,21 +19,38 @@ class Board
 
   def initialize(lines)
     @corners = Set.new
-    @verticals = Set.new
-    @horizontals = Set.new
+    @verticals = {}
+    @horizontals = {}
 
+    # Use lightweight disjoint set forest to check connectedness of two points.
+    # One for horizontals and one for verticals.
+    # Since any checked pair will share one dimension, it's fine to reuse IDs.
+
+    # Iterate horizontally
     lines.each_with_index { |row, y|
+      horiz_id = 0
       row.each_char.with_index { |c, x|
-        pt = [y, x].freeze
-        @corners     << pt if c == ?+
-        @verticals   << pt if c == ?+ || c == ?|
-        @horizontals << pt if c == ?+ || c == ?-
+        if c == ?+
+          pt = [y, x].freeze
+          @corners << pt
+          @horizontals[pt] = horiz_id
+        end
+        horiz_id += 1 if c != ?+ && c != ?-
       }
     }
-
     @corners.freeze
-    @verticals.freeze
     @horizontals.freeze
+
+    # Iterate vertically
+    (lines.map(&:size).max || 0).times { |x|
+      vert_id = 0
+      lines.each_with_index { |row, y|
+        c = row[x]
+        @verticals[[y, x].freeze] = vert_id if c == ?+
+        vert_id += 1 if c != ?+ && c != ?|
+      }
+    }
+    @verticals.freeze
   end
 
   def rectangles
@@ -54,8 +71,8 @@ class Board
 
   def connected?(p1, p2)
     p1, p2 = [p1, p2].sort
-    return (p1.x..p2.x).all? { |x| @horizontals.include?([p1.y, x]) } if p1.y == p2.y
-    return (p1.y..p2.y).all? { |y| @verticals.include?([y, p1.x]) } if p1.x == p2.x
+    return @horizontals[p1] == @horizontals[p2] if p1.y == p2.y
+    return @verticals[p1] == @verticals[p2] if p1.x == p2.x
     raise "#{p1}, #{p2} aren't in a line"
   end
 end
