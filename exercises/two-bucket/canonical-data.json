@@ -93,6 +93,34 @@
       }
     },
     {
+      "description": "Not possible to reach the goal",
+      "property": "measure",
+      "input": {
+        "bucketOne": 6,
+        "bucketTwo": 15,
+        "goal": 5,
+        "startBucket": "one"
+      },
+      "expected": {
+        "error": "impossible"
+      }
+    },
+    {
+      "description": "With the same buckets but a different goal, then it is possible",
+      "property": "measure",
+      "input": {
+        "bucketOne": 6,
+        "bucketTwo": 15,
+        "goal": 9,
+        "startBucket": "one"
+      },
+      "expected": {
+        "moves": 10,
+        "goalBucket": "two",
+        "otherBucket": 0
+      }
+    },
+    {
       "description": "https://github.com/exercism/go/pull/1271",
       "property": "measure",
       "input": {
