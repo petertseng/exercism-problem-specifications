@@ -91,6 +91,21 @@
         "goalBucket": "two",
         "otherBucket": 2
       }
+    },
+    {
+      "description": "https://github.com/exercism/go/pull/1271",
+      "property": "measure",
+      "input": {
+        "bucketOne": 333333,
+        "bucketTwo": 666667,
+        "goal": 1,
+        "startBucket": "one"
+      },
+      "expected": {
+        "moves": 1999992,
+        "goalBucket": "one",
+        "otherBucket": 666667
+      }
     }
   ]
 }
