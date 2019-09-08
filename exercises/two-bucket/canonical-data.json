@@ -140,6 +140,22 @@
       "expected": {
         "error": "impossible"
       }
+    },
+    {
+      "uuid": "f2305e58-29db-4e7f-9d48-67cd75340c9c",
+      "description": "https://github.com/exercism/go/pull/1271",
+      "property": "measure",
+      "input": {
+        "bucketOne": 333333,
+        "bucketTwo": 666667,
+        "goal": 1,
+        "startBucket": "one"
+      },
+      "expected": {
+        "moves": 1999992,
+        "goalBucket": "one",
+        "otherBucket": 666667
+      }
     }
   ]
 }
