@@ -78,5 +78,6 @@ end
 json = JSON.parse(File.read(File.join(__dir__, 'canonical-data.json')))
 
 verify(json['cases'], property: 'rectangles') { |i, _|
-  Board.new(i['strings']).rectangles
+  t = Time.now
+  Board.new(i['strings']).rectangles.tap { |x| puts "took #{Time.now - t} to calculate #{x}" }
 }
