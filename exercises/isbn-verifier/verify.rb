@@ -5,6 +5,19 @@ json = JSON.parse(File.read(File.join(__dir__, 'canonical-data.json')))
 
 class BadLengthError < Exception; end
 
+# For debugging
+def showit(input)
+  clean = input.delete(?-).chars
+  s = 0
+  clean.reverse.each_with_index { |c, i|
+    contrib = (c == ?X ? 10 : Integer(c)) * (i + 1)
+    puts "#{c} * #{i + 1} (#{contrib})"
+    s += contrib
+  }
+  puts "total: #{s} (divisible by 11? #{s % 11 == 0})"
+  s
+end
+
 def valid_isbn?(input, strict_x: true)
   clean = input.delete(?-).chars
   begin
