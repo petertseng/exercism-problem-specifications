@@ -43,6 +43,44 @@
       ]
     },
     {
+      "slug": "resistor-color",
+      "uuid": "75653d83-1a64-472c-ac43-49e87833c7f7",
+      "core": true,
+      "auto_approve": true,
+      "unlocked_by": null,
+      "difficulty": 1,
+      "topics": [
+        "enums",
+        "arrays",
+        "pointers"
+      ]
+    },
+    {
+      "slug": "resistor-color-duo",
+      "uuid": "93271b2e-8ad9-4e7d-8732-5988140e8c00",
+      "core": false,
+      "auto_approve": true,
+      "unlocked_by": "resistor-color",
+      "difficulty": 1,
+      "topics": [
+        "enums",
+        "arrays"
+      ]
+    },
+    {
+      "slug": "resistor-color-trio",
+      "uuid": "6cd7bb9c-2817-4c44-8bef-5f2916b2db2d",
+      "core": false,
+      "auto_approve": true,
+      "unlocked_by": "resistor-color",
+      "difficulty": 1,
+      "topics": [
+        "enums",
+        "arrays",
+        "structs"
+      ]
+    },
+    {
       "slug": "isogram",
       "uuid": "b3c9d339-60bc-48fe-84ba-77cbc0017a89",
       "core": true,
@@ -244,6 +282,18 @@
       ]
     },
     {
+      "slug": "square-root",
+      "uuid": "0400f52d-48ae-4300-a72e-32e8a08514d0",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "control_flow_loops",
+        "bitwise_operations",
+        "math"
+      ]
+    },
+    {
       "slug": "binary-search",
       "uuid": "db1771d2-afd8-4e01-9b6a-6be75029ef1d",
       "core": true,
@@ -269,6 +319,17 @@
       ]
     },
     {
+      "slug": "rational-numbers",
+      "uuid": "c3325db9-8067-4c2f-94b3-b5190b056d38",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 5,
+      "topics": [
+        "math",
+        "structs"
+      ]
+    },
+    {
       "slug": "roman-numerals",
       "uuid": "6cde608f-9819-46cd-884b-dbda39a4fa16",
       "core": true,
@@ -279,6 +340,38 @@
         "control_flow_loops",
         "memory_management",
         "strings",
+        "structs"
+      ]
+    },
+    {
+      "slug": "pythagorean-triplet",
+      "uuid": "7b7c61f4-2849-46b7-9057-900bb6b95052",
+      "core": true,
+      "auto_approve": true,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "memory_management",
+        "arrays",
+        "flexible_array_members",
+        "structs"
+      ]
+    },
+    {
+      "slug": "saddle-points",
+      "uuid": "448f9137-4e58-4c26-9853-abe07f01c908",
+      "core": true,
+      "auto_approve": true,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "control_flow_if_else_statements",
+        "control_flow_loops",
+        "memory_management",
+        "arrays",
+        "flexible_array_members",
         "structs"
       ]
     },

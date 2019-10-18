@@ -521,6 +521,17 @@
       ]
     },
     {
+      "slug": "nth-prime",
+      "uuid": "8600a843-ec71-4f1a-b9fe-2ed515035101",
+      "core": false,
+      "unlocked_by": "hamming",
+      "difficulty": 4,
+      "topics": [
+        "algorithms",
+        "math"
+      ]
+    },
+    {
       "slug": "largest-series-product",
       "uuid": "b312ff0e-90e3-4dd8-99dc-df4a9deb1907",
       "core": false,
@@ -584,6 +595,16 @@
         "bitwise_operations",
         "integers",
         "transforming"
+      ]
+    },
+    {
+      "slug": "satellite",
+      "uuid": "f69d4fd0-3547-4be0-8d09-f368b80b9df7",
+      "core": false,
+      "unlocked_by": "bob",
+      "difficulty": 5,
+      "topics": [
+        "trees"
       ]
     },
     {
@@ -757,6 +778,16 @@
       ]
     },
     {
+      "slug": "book-store",
+      "uuid": "21db1eaa-db00-49fc-9ec5-c2913a9ff616",
+      "core": false,
+      "unlocked_by": "space-age",
+      "difficulty": 7,
+      "topics": [
+        "algorithms"
+      ]
+    },
+    {
       "slug": "dominoes",
       "uuid": "767acde9-cbca-4cdd-afed-125f14e92e10",
       "core": false,
@@ -808,6 +839,18 @@
       "difficulty": 2,
       "topics": [
         "lists"
+      ]
+    },
+    {
+      "slug": "simple-linked-list",
+      "uuid": "56a794de-40ee-4ff2-a1dd-f9b83f62d4b0",
+      "core": false,
+      "unlocked_by": "strain",
+      "difficulty": 3,
+      "topics": [
+        "data_structures",
+        "lists",
+        "recursion"
       ]
     }
   ]

@@ -63,6 +63,60 @@
       ]
     },
     {
+      "slug": "high-scores",
+      "uuid": "9e1a946f-51c5-4201-8d61-79eb07437998",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "classes",
+        "lists"
+      ]
+    },
+    {
+      "slug": "matrix",
+      "uuid": "32ad6c64-82ae-434e-83e1-1cf11eecc3cc",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "lists",
+        "transforming"
+      ]
+    },
+    {
+      "slug": "series",
+      "uuid": "6893e956-8e80-4a3e-a622-6b76a65495c4",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "loops"
+      ]
+    },
+    {
+      "slug": "word-count",
+      "uuid": "67e6488d-8bf0-401d-b70d-689a37661781",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "regular_expressions",
+        "strings"
+      ]
+    },
+    {
+      "slug": "hamming",
+      "uuid": "cee5bfb1-41d9-4de9-ab64-b6cca69761a1",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "input_validation",
+        "strings"
+      ]
+    },
+    {
       "slug": "raindrops",
       "uuid": "cc188b91-94d2-44bc-9ede-aaa0a4a8cd1c",
       "core": true,
@@ -71,6 +125,89 @@
       "topics": [
         "conditionals",
         "math",
+        "strings"
+      ]
+    },
+    {
+      "slug": "isogram",
+      "uuid": "e11d9894-90be-4835-8ad1-39503c1c6824",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "equality",
+        "strings"
+      ]
+    },
+    {
+      "slug": "scrabble-score",
+      "uuid": "407e3c61-e797-4920-a83e-a8ac722f44cc",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 2,
+      "topics": [
+        "conditionals",
+        "loops"
+      ]
+    },
+    {
+      "slug": "luhn",
+      "uuid": "f5a11e85-12ff-4a6f-be6b-1a20338fbfa4",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "conditionals",
+        "integers",
+        "loops"
+      ]
+    },
+    {
+      "slug": "clock",
+      "uuid": "560f29e0-6007-438a-9963-a27f81b48866",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "classes",
+        "math",
+        "text_formatting"
+      ]
+    },
+    {
+      "slug": "tournament",
+      "uuid": "9f6f38d0-19da-409c-898a-3b0a58195ca9",
+      "core": true,
+      "auto_approve": false,
+      "unlocked_by": null,
+      "difficulty": 5,
+      "topics": [
+        "classes",
+        "conditionals",
+        "loops",
+        "maps",
+        "text_formatting",
+        "transforming"
+      ]
+    },
+    {
+      "slug": "twelve-days",
+      "uuid": "98fbfacc-534f-4896-b7e1-a4a9bd80a35b",
+      "core": true,
+      "unlocked_by": null,
+      "difficulty": 3,
+      "topics": [
+        "loops",
+        "text_formatting"
+      ]
+    },
+    {
+      "slug": "rna-transcription",
+      "uuid": "1479aec4-6f8f-403e-ad0b-33d0b7b7891a",
+      "core": false,
+      "unlocked_by": "two-fer",
+      "difficulty": 1,
+      "topics": [
         "strings"
       ]
     },

@@ -16,7 +16,8 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "println"
+        "strings",
+        "test_driven_development"
       ]
     },
     {
@@ -37,8 +38,10 @@
       "unlocked_by": "hello-world",
       "difficulty": 1,
       "topics": [
-        "case_or_format",
-        "mutable_string"
+        "conditionals",
+        "strings",
+        "type_conversion",
+        "variables"
       ]
     },
     {
@@ -153,10 +156,22 @@
       ]
     },
     {
+      "slug": "high-scores",
+      "uuid": "7e0f5d25-e1f2-4a25-b150-1c8b24f328d7",
+      "core": false,
+      "unlocked_by": "gigasecond",
+      "difficulty": 1,
+      "topics": [
+        "iterators",
+        "lifetimes",
+        "vectors"
+      ]
+    },
+    {
       "slug": "bob",
       "uuid": "38ef1802-2730-4f94-bafe-d2cd6b3e7f95",
-      "core": true,
-      "unlocked_by": null,
+      "core": false,
+      "unlocked_by": "gigasecond",
       "difficulty": 1,
       "topics": [
         "chars",
@@ -167,7 +182,7 @@
       "slug": "matching-brackets",
       "uuid": "40729822-4265-4c14-b03f-a00bff5f24bb",
       "core": false,
-      "unlocked_by": "bob",
+      "unlocked_by": "gigasecond",
       "difficulty": 1,
       "topics": [
         "stack_or_recursion"

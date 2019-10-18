@@ -12,7 +12,7 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "control_flow_conditionals",
+        "conditionals",
         "optional_values",
         "strings",
         "text_formatting"
@@ -81,10 +81,22 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
         "equality",
+        "loops",
         "strings"
+      ]
+    },
+    {
+      "slug": "beer-song",
+      "uuid": "50c34698-7767-42b3-962f-21c735e49787",
+      "core": false,
+      "unlocked_by": "scrabble-score",
+      "difficulty": 3,
+      "topics": [
+        "loops",
+        "strings",
+        "text_formatting"
       ]
     },
     {
@@ -131,8 +143,8 @@
       "unlocked_by": null,
       "difficulty": 2,
       "topics": [
-        "control_flow_loops",
         "lists",
+        "loops",
         "maps",
         "regular_expressions"
       ]
@@ -144,12 +156,11 @@
       "unlocked_by": null,
       "difficulty": 2,
       "topics": [
-        "control_flow_conditionals",
+        "conditionals",
         "pattern_recognition",
         "polymorphism",
         "regular_expressions",
-        "strings",
-        "unicode"
+        "strings"
       ]
     },
     {
@@ -172,9 +183,9 @@
       "unlocked_by": null,
       "difficulty": 2,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
         "equality",
+        "loops",
         "strings"
       ]
     },
@@ -185,9 +196,9 @@
       "unlocked_by": "hamming",
       "difficulty": 2,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
         "equality",
+        "loops",
         "regular_expressions",
         "strings"
       ]
@@ -199,8 +210,8 @@
       "unlocked_by": "hamming",
       "difficulty": 2,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "regular_expressions"
       ]
     },
@@ -221,7 +232,7 @@
       "unlocked_by": null,
       "difficulty": 2,
       "topics": [
-        "control_flow_conditionals",
+        "conditionals",
         "equality",
         "strings"
       ]
@@ -244,9 +255,9 @@
       "unlocked_by": null,
       "difficulty": 1,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
         "equality",
+        "loops",
         "strings"
       ]
     },
@@ -272,8 +283,8 @@
       "unlocked_by": null,
       "difficulty": 3,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
+        "loops",
         "strings"
       ]
     },
@@ -295,10 +306,10 @@
       "unlocked_by": null,
       "difficulty": 3,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops",
+        "conditionals",
         "integers",
         "lists",
+        "loops",
         "math"
       ]
     },
@@ -309,7 +320,7 @@
       "unlocked_by": "space-age",
       "difficulty": 3,
       "topics": [
-        "control_flow_conditionals",
+        "conditionals",
         "math"
       ]
     },
@@ -419,8 +430,8 @@
       "topics": [
         "arrays",
         "bitwise_operations",
-        "control_flow_conditionals",
-        "control_flow_loops"
+        "conditionals",
+        "loops"
       ]
     },
     {
@@ -430,8 +441,8 @@
       "unlocked_by": "hamming",
       "difficulty": 3,
       "topics": [
-        "control_flow_conditionals",
-        "control_flow_loops"
+        "conditionals",
+        "loops"
       ]
     },
     {

@@ -152,6 +152,7 @@
         "algorithms",
         "arrays",
         "conditionals",
+        "data_structures",
         "loops",
         "lists",
         "optional_values"
@@ -176,6 +177,7 @@
       "unlocked_by": null,
       "difficulty": 6,
       "topics": [
+        "data_structures",
         "loops",
         "lists",
         "recursion"
@@ -653,6 +655,7 @@
       "topics": [
         "arrays",
         "conditionals",
+        "data_structures",
         "loops",
         "matrices"
       ]
@@ -798,6 +801,17 @@
       ]
     },
     {
+      "slug": "resistor-color-trio",
+      "uuid": "7170d6a3-a32f-44d7-b82e-524485c58aaf",
+      "core": false,
+      "unlocked_by": "bob",
+      "difficulty": 5,
+      "topics": [
+        "conditionals",
+        "loops"
+      ]
+    },
+    {
       "slug": "say",
       "uuid": "12989bb3-c593-4f68-bea4-e2c5b76bc3c0",
       "core": false,
@@ -873,6 +887,7 @@
       "topics": [
         "arrays",
         "conditionals",
+        "data_structures",
         "loops",
         "equality",
         "lists",
@@ -903,6 +918,7 @@
       "topics": [
         "arrays",
         "conditionals",
+        "data_structures",
         "loops",
         "exception_handling",
         "lists"
@@ -916,6 +932,7 @@
       "difficulty": 8,
       "topics": [
         "arrays",
+        "data_structures",
         "lists"
       ]
     },
@@ -971,6 +988,19 @@
       "topics": [
         "algorithms",
         "games"
+      ]
+    },
+    {
+      "slug": "scale-generator",
+      "uuid": "b9c586e8-998b-4f5d-ab98-a08be29a9f19",
+      "core": false,
+      "unlocked_by": "pangram",
+      "difficulty": 3,
+      "topics": [
+        "loops",
+        "pattern_recognition",
+        "strings",
+        "arrays"
       ]
     },
     {

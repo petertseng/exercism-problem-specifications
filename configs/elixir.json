@@ -365,7 +365,7 @@
       ]
     },
     {
-      "slug": "bracket-push",
+      "slug": "matching-brackets",
       "uuid": "cf0084a0-7b1d-4714-b7b2-618e3ad6e147",
       "core": false,
       "unlocked_by": "roman-numerals",
@@ -1019,6 +1019,27 @@
       "topics": [
         "algorithms",
         "math"
+      ]
+    },
+    {
+      "slug": "dnd-character",
+      "uuid": "bd15a0e0-c19e-4a52-be6c-1a61d14c54cd",
+      "core": false,
+      "unlocked_by": "rna-transcription",
+      "difficulty": 3,
+      "topics": [
+        "random",
+        "structs"
+      ]
+    },
+    {
+      "slug": "resistor-color",
+      "uuid": "12efd520-e3e5-437f-b93e-38af14aa605d",
+      "core": false,
+      "unlocked_by": "hello-world",
+      "difficulty": 1,
+      "topics": [
+        "enumerables"
       ]
     }
   ]
