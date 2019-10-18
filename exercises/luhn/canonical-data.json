@@ -43,6 +43,14 @@
       "expected": true
     },
     {
+      "description": "a valid Canadian SIN with trailing spaces",
+      "property": "valid",
+      "input": {
+        "value": "055 444 285 "
+      },
+      "expected": true
+    },
+    {
       "description": "invalid Canadian SIN",
       "property": "valid",
       "input": {
