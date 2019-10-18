@@ -47,6 +47,15 @@
       "expected": true
     },
     {
+      "uuid": "5701c5ac-5a9c-4f02-8367-ba4e3cc6d247",
+      "description": "a valid Canadian SIN with trailing spaces",
+      "property": "valid",
+      "input": {
+        "value": "055 444 285 "
+      },
+      "expected": true
+    },
+    {
       "uuid": "1cdcf269-6560-44fc-91f6-5819a7548737",
       "description": "invalid Canadian SIN",
       "property": "valid",
