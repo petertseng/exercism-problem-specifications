@@ -3,9 +3,26 @@ require_relative '../../verify'
 
 json = JSON.parse(File.read(File.join(__dir__, 'canonical-data.json')))
 
-verify(json['cases'], property: 'abbreviate') { |i, _|
-  i['phrase'].delete(?').split(/[_\W]+/).map(&:chr).join.upcase
-}
+multi_verify(json['cases'], property: 'abbreviate', implementations: [
+  {
+    name: 'split',
+    f: ->(i, _) {
+      i['phrase'].delete(?').split(/[_\W]+/).map(&:chr).join.upcase
+    },
+  },
+  {
+    name: 'scan',
+    f: ->(i, _) {
+      i['phrase'].delete("'_").scan(/\b[a-zA-Z]/).join.upcase
+    },
+  },
+  {
+    name: 'gsub',
+    f: ->(i, _) {
+      i['phrase'].gsub(/[a-zA-Z']+[^a-zA-Z']*/, &:chr).upcase
+    },
+  },
+])
 
 module AllCaps refine String do
   def all_caps?
