@@ -5,9 +5,21 @@ on:
   push:
     branches:
       - main
+      - verify
   workflow_dispatch:
 
 jobs:
+  verify-tests-correctness:
+    name: Verify tests correctness
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.4'
+      - name: Verify all files
+        run: sh bin/verify-all.sh
+
   required-files:
     name: All required files are present
     runs-on: ubuntu-26.04
