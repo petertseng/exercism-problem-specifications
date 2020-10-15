@@ -115,7 +115,7 @@
                         "number": 0
                     },
                     "expected": {
-                        "error": "Classification is only possible for natural numbers."
+                        "error": "Classification is only possible for positive integers."
                     }
                 },
                 {
@@ -125,7 +125,7 @@
                         "number": -1
                     },
                     "expected": {
-                        "error": "Classification is only possible for natural numbers."
+                        "error": "Classification is only possible for positive integers."
                     }
                 }
             ]
