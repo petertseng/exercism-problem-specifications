@@ -39,8 +39,8 @@ jobs:
       - name: Checkout the target branch
         uses: actions/checkout@v2
         with:
-          ref: "${{ github.base_ref }}"
-          path: "old"
+          ref: 'master'
+          path: 'old'
 
       - name: Check that no test has been mutated
         run: |
