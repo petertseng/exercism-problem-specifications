@@ -18,6 +18,13 @@ Dir.glob("#{__dir__}/exercises/*/canonical-data.json") { |f|
   props = cases(JSON.parse(File.read(f))).group_by { |c| c['property'] }
   props.each { |prop, cases|
     keys = cases.map { |c| c['input'].keys }.tally
-    puts "#{exercise} has inconsistent #{prop} keys: #{keys}" if keys.size != 1
+    next if keys.size == 1
+
+    puts "#{exercise} has inconsistent #{prop} keys:"
+    puts
+    keys.each { |ks, count|
+      puts "* #{count} cases have #{ks}"
+    }
+    puts
   }
 }
