@@ -25,6 +25,7 @@ using Colours
 
 def run(
   cases, property:,
+  allowed_input_keys: nil,
   should_fail: false,
   error: ->(c) { (exp = c['expected']).is_a?(Hash) && exp.has_key?('error') },
   error_class: StandardError,
@@ -88,6 +89,19 @@ def run(
       end
     end
   }
+
+  inputs = cases.map { |c| c['input'].keys }.uniq
+  # if allowed_input_keys is nil, enforce that there's just one.
+  # if it's non-nil, enforce that they're exactly the same.
+  if allowed_input_keys.nil?
+    if inputs.size != 1
+      at_exit { raise "#{property} has inconsistent #{inputs.size} inputs: #{inputs}" }
+    end
+  else
+    if inputs.map(&:sort).sort != allowed_input_keys.map(&:sort).sort
+      at_exit { raise "#{property} has #{inputs}, which don't match allowed: #{allowed_input_keys}" }
+    end
+  end
 
   [passed, failed, errored]
 end
