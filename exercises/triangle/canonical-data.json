@@ -31,10 +31,28 @@
         },
         {
           "uuid": "33eb6f87-0498-4ccf-9573-7f8c3ce92b7b",
-          "description": "any side is unequal",
+          "description": "long side is unequal",
           "property": "equilateral",
           "input": {
             "sides": [2, 3, 2]
+          },
+          "expected": false
+        },
+        {
+          "uuid": "33eb6f87-0498-4ccf-9573-7f8c3ce92b7c",
+          "description": "short side is unequal and it comes last",
+          "property": "equilateral",
+          "input": {
+            "sides": [4, 4, 3]
+          },
+          "expected": false
+        },
+        {
+          "uuid": "33eb6f87-0498-4ccf-9573-7f8c3ce92b7d",
+          "description": "short side is unequal and it comes first",
+          "property": "equilateral",
+          "input": {
+            "sides": [3, 4, 4]
           },
           "expected": false
         },
