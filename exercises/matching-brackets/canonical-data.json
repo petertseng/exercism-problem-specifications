@@ -131,6 +131,18 @@
       "expected": false
     },
     {
+      "uuid": "da8b840b-77f5-4b45-aa61-0d64185aa4d7",
+      "description": "paired and wrong nested brackets but outermost are correct",
+      "comments": [
+        "Ensures first opened bracket is not the only one being traced"
+      ],
+      "property": "isPaired",
+      "input": {
+        "value": "([{]})"
+      },
+      "expected": false
+    },
+    {
       "uuid": "ef47c21b-bcfd-4998-844c-7ad5daad90a8",
       "description": "paired and incomplete brackets",
       "property": "isPaired",
