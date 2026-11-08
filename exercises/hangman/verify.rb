@@ -1,0 +1,1 @@
+../save-the-cow/verify.rb
